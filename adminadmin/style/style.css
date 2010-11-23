@@ -1,0 +1,622 @@
+body, td, textarea, input, select, option {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+}
+
+.footer {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+}
+
+.aaa {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration:none;
+	color:#7fa2d3;
+}
+
+.b {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration:none;
+}
+
+.keterangan_product {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+}
+
+a {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #545454;
+	text-decoration: underline;
+}
+
+.news {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #acbccc;
+	}
+
+.header_product {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+}
+
+.header_kategori {
+	font-family: verdana;
+	font-size: 12pt;
+	font-weight:bold;
+	color: #8ec0e6;
+	text-decoration: none;
+}
+
+.header_miring {
+	font-family: verdana;
+	font-size: 16pt;
+	color: #000000;
+	text-decoration:inherit;
+}
+
+.exam {
+	font-family: verdana;
+	font-size: 7pt;
+	color: #000000;
+}
+
+.header_error {
+	font-family: verdana;
+	font-size: 14pt;
+	color: #e88e19;
+}
+
+.link_back {
+	font-family: verdana;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration:underline;
+}
+
+.link_kecil {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #3ca3de;
+	text-decoration:underline;
+}
+
+.link_a {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #3ca3de;
+	text-decoration:underline;
+}
+
+.link_view {
+	font-family: verdana;
+	font-size: 9pt;
+	color: #49555d;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+
+.link_biru {
+	font-family: verdana;
+	font-size: 9pt;
+	color: #3ca3de;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.link_biru2 {
+	font-family: verdana;
+	font-size: 9pt;
+	color: #3ca3de;
+	text-decoration:underline;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.link_pro {
+	font-family: verdana;
+	font-size: 11pt;
+	color: #000000;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.link_topik {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #5b5b5b;
+	text-decoration:underline;
+}
+
+.ket_sub {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #8ec0e6;
+	text-decoration:none;
+}
+
+.header_sukses {
+	font-family: verdana;
+	font-size: 14pt;
+	color: #51acf2;
+}
+
+.orange {
+	font-family: verdana;
+	font-size: 13pt;
+	color: #a24a0a;
+}
+
+.miringkuning {
+	font-family: verdana;
+	font-size: 11pt;
+	color: #c4a128;
+	font-style:italic;
+}
+
+.kuning {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #c4a128;
+}
+
+.orangekecil {
+	font-family: verdana;
+	font-size: 9pt;
+	color: #a24a0a;
+}
+
+.abu2besar {
+	font-family: verdana;
+	font-size: 12pt;
+	font-weight:bold;
+	color: #656565;
+}
+
+.merah {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #ff0000;
+}
+
+
+.biru {
+	font-family: verdana;
+	font-size: 12pt;
+	color: #656565;
+	font-weight:bold;
+}
+
+.birukecil {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #1c7dea;
+	text-decoration:none;
+}
+
+.birukecil2 {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #1c7dea;
+	text-decoration:underline;
+}
+
+.bid {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:bold;
+	color: #000000;
+	text-decoration:none;
+}
+
+.birukecil3 {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #1c7dea;
+	text-decoration:none;
+}
+
+.link_redirect {
+	font-family: verdana;
+	font-size: 9pt;
+	color: #000000;
+}
+
+.hitam {
+	font-family: verdana;
+	font-size: 9pt;
+	color: #000000;
+	text-decoration:underline;
+}
+
+.normal {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration:none;
+}
+
+.special {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #ff0000;
+	text-decoration:none;
+}
+
+.harga {
+	font-family: verdana;
+	font-size: 12pt;
+	color: #d12f2f;
+	font-weight:bold;
+}
+
+.num {
+	font-family: verdana;
+	font-size: 9pt;
+	color: #df9326;
+}
+
+.putih_judul {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+.gerak {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration:none;
+}
+
+.login {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #447db0;
+	text-decoration:none;
+}
+
+.print {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #447db0;
+	text-decoration:none;
+}
+
+
+/* menu */
+div#container {
+  width: 800px;
+  margin: 0 0 0 0;
+  /*padding-top: 50px;*/
+  text-align: left;
+}
+/*
+  navigation bar - horizontal dropdown
+  --------------------------------------------------
+*/
+
+/* first level */
+ul.menu {
+  float: left;
+  height: 100%;
+  width: 800px;
+  margin: 0 0 0 0 ;
+  padding: 0;
+  border-left: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  list-style: none;
+  background: transparent url('../images/bg-nav.png') repeat-x 0 0;
+}
+
+ul.menu li {
+  position: relative;
+  float: left;
+  line-height: 1.1;
+}
+
+ul.menu li a {
+  display: block;
+  width: auto;
+  padding: 10px;
+  text-decoration: none;
+  color: #7c7c7c;
+  background: transparent url('../images/bg-nav-sep.png') no-repeat right 2px;
+}
+
+ul.menu li.last a {
+  background: transparent;
+}
+
+ul.menu li a.sub {
+  padding-right: 15px;
+  background: transparent url('../images/bg-nav-sep.png') no-repeat right -30px;
+}
+
+ul.menu li:hover,
+ul.menu li.hover /* protofish */ {
+  background: transparent url('../images/bg-nav.png') repeat-x 0 -32px;
+}
+
+ul.menu li:hover a,
+ul.menu li.hover /* protofish */ a {
+  color: #000;
+}
+
+ul.menu li.active a {
+  color: #f15c30;
+}
+
+/* second level */
+ul.menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  top: 32px;
+  width: 168px;
+  border-top: 1px solid #d7d7d7;
+}
+
+/* resetting first level */
+ul.menu ul ul {
+  
+}
+
+ul.menu li:hover li,
+ul.menu li:hover li a,
+ul.menu li.hover /* protofish */ li,
+ul.menu li.hover /* protofish */ li a {
+  background: #fff;
+  color: #7c7c7c;
+}
+
+/* submenu markup */
+ul.menu li li {
+  width: 100%;
+  border-left: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+}
+
+ul.menu li li.last {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+ul.menu li li a {
+  padding: 5px 5px 5px 10px;
+}
+
+ul.menu li:hover li:hover a,
+ul.menu li.hover li.hover /* protofish */ a {
+  background: #f6f6f6;
+  color: #000;
+}
+
+ul.menu li:hover li.active a,
+ul.menu li.hover /* protofish */ li.active a {
+  color: #f15c30;
+}
+
+ul.menu li li a.sub {
+  padding-right: 15px;
+  background: url('../images/arrow_r.png') no-repeat 95% 50%;
+}
+
+ul.menu li:hover li:hover a.sub,
+ul.menu li.hover li.hover /* protofish */ a.sub {
+  background: #f6f6f6 url('../images/arrow_r.png') no-repeat 95% 50%;
+}
+
+/* third level */
+/* resetting second level */
+ul.menu ul ul{
+  top: -1px;
+  margin-left: 169px;
+  background: #fff;
+}
+
+ul.menu li:hover li:hover li,
+ul.menu li:hover li:hover li a, {
+ul.menu li.hover li.hover /* protofish */ li,
+ul.menu li.hover li.hover /* protofish */ li a
+  color: #7c7c7c;
+}
+
+/* subsubmenu markup */
+ul.menu li:hover li:hover li:hover a,
+ul.menu li.hover li.hover li.hover /* protofish */ a {
+  background: #e6e6e6;
+  color: #000;
+}
+
+ul.menu li:hover li:hover li.active a,
+ul.menu li.hover li.hover /* protofish */ li.active a {
+  color: #f15c30;
+}
+
+ul.menu li:hover li:hover li:hover a.sub,
+ul.menu li.hover li.hover li.hover /* protofish */ a.sub {
+  background: #e6e6e6 url('../images/arrow_r.png') no-repeat 95% 50%;
+}
+
+/* fourth level */
+/* resetting second level */
+ul.menu li:hover li:hover li:hover li,
+ul.menu li:hover li:hover li:hover li a,
+ul.menu li.hover li.hover li.hover /* protofish */ li,
+ul.menu li.hover li.hover li.hover /* protofish */ li a {
+  color: #7c7c7c;
+}
+
+/* subsubmenu markup */
+ul.menu li:hover li:hover li:hover li:hover a,
+ul.menu li.hover li.hover li.hover li.hover /* protofish */ a {
+  background: #ccc;
+  color: #000;
+}
+
+ul.menu li:hover li:hover li:hover li.active a,
+ul.menu li.hover li.hover li.hover /* protofish */ li.active a {
+  color: #f15c30;
+}
+
+ul.menu li:hover li:hover li:hover li a.sub,
+ul.menu li.hover li.hover li.hover /* protofish */ li a.sub {
+  background: #e6e6e6;
+}
+
+ul.menu li:hover li:hover li:hover li:hover a.sub,
+ul.menu li.hover li.hover li.hover li.hover /* protofish */ a.sub {
+  background: #ccc;
+}
+
+/* hiding fifth level */
+div#nav ul ul ul ul ul {
+  display: none;
+}
+
+/* show hide behaviour */
+ul.menu ul,
+ul.menu li:hover ul ul,
+ul.menu ul ul,
+ul.menu li:hover ul ul ul,
+ul.menu ul ul ul,
+ul.menu li:hover ul ul ul ul {
+  position: absolute;
+  left: -999em;
+}
+
+ul.menu li:hover ul,
+ul.menu li li:hover ul,
+ul.menu li li li:hover ul,
+ul.menu li li li li:hover ul {
+  left: -1px;
+  z-index: 999;
+}
+
+/* show hide behaviour with protofish */
+ul.menu li.hover ul ul,
+ul.menu li.hover ul ul ul,
+ul.menu li.hover ul ul ul ul {
+  position: absolute;
+  left: -999em;
+}
+
+ul.menu li.hover ul,
+ul.menu li li.hover ul,
+ul.menu li li li.hover ul,
+ul.menu li li li li.hover ul {
+  left: -1px;
+  z-index: 999;
+}
+
+
+/* HighSlide */
+.highslide-wrapper div {
+	font-family: Verdana, Helvetica;
+	font-size: 10pt;
+}
+.highslide-html {
+	background-color: white;
+}
+.highslide-maincontent {
+	display: none;
+}
+.highslide-loading {
+	display: block;
+	color: black;
+	font-size: 8pt;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 2px;
+	border: 1px solid black;
+	background-color: white;
+
+	padding-left: 22px;
+	background-image: url(highslide/graphics/loader.white.gif);
+	background-repeat: no-repeat;
+	background-position: 3px 1px;
+}
+a.highslide-credits,
+a.highslide-credits i {
+	padding: 2px;
+	color: silver;
+	text-decoration: none;
+	font-size: 10px;
+}
+a.highslide-credits:hover,
+a.highslide-credits:hover i {
+	color: white;
+	background-color: gray;
+}
+
+
+/* Styles for the popup */
+.highslide-wrapper, .rounded-white {
+	background-color: white;
+}
+.highslide-wrapper .highslide-html-content {
+	width: 400px;
+	padding: 0 5px 5px 5px;
+}
+.highslide-wrapper .highslide-header {
+	padding-bottom: 5px;
+}
+.highslide-wrapper .highslide-header ul {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+.highslide-wrapper .highslide-header ul li {
+	display: inline;
+	padding-left: 1em;
+}
+.highslide-wrapper .highslide-header ul li.highslide-previous, .highslide-wrapper .highslide-header ul li.highslide-next {
+	display: none;
+}
+.highslide-wrapper .highslide-header a {
+	font-weight: bold;
+	color: gray;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.highslide-wrapper .highslide-header a:hover {
+	color: black;
+}
+.highslide-wrapper .highslide-header .highslide-move a {
+	cursor: move;
+}
+.highslide-wrapper .highslide-footer {
+	height: 11px;
+}
+.highslide-wrapper .highslide-footer .highslide-resize {
+	float: right;
+	height: 11px;
+	width: 11px;
+	background: url(highslide/graphics/resize.gif);
+}
+.highslide-wrapper .highslide-body {
+}
+.highslide-move {
+	cursor: move;
+}
+.highslide-resize {
+	cursor: nw-resize;
+}
+

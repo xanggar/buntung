@@ -1,0 +1,290 @@
+body, td, textarea, input {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:regular;
+	color: #000000;
+}
+
+.header_miring {
+	font-family: Tahoma, Arial;
+	font-size: 14pt;
+	color: #000000;
+	text-decoration:inherit;
+}
+
+.header_error {
+	font-family: Tahoma, Arial;
+	font-size: 16pt;
+	color: #e88e19;
+}
+
+.header_login {
+	font-family: Tahoma, Arial;
+	font-size: 14pt;
+	color: #000000;
+}
+
+
+.link_biru {
+	font-family: Tahoma, Arial;
+	font-size: 10pt;
+	color: #3e70bc;
+	text-decoration:underline;
+}
+
+.num {
+	font-family: Tahoma, Arial;
+	font-size: 8pt;
+	color: #df9326;
+}
+
+
+.orange {
+	font-family: Tahoma, Arial;
+	font-size: 13pt;
+	color: #a24a0a;
+}
+
+.orangekecil {
+	font-family: Tahoma, Arial;
+	font-size: 9pt;
+	color: #a24a0a;
+}
+
+.kotak
+{ 
+			font-family: Tahoma, Verdana, Arial;
+			font-size: 10pt;
+			background-color:#373b45;
+			text-decoration:none;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px; 
+}
+
+.kotak_kiri
+{ 
+			font-family: Tahoma, Verdana, Arial;
+			font-size: 10pt;
+			background-color:#e6e7e8;
+			text-decoration:none;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px; 
+}
+
+.kotak_login
+{ 
+			font-family: Tahoma, Verdana, Arial;
+			font-size: 10pt;
+			background-color:#373b45;
+			text-decoration:none;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px; 
+}
+
+.kotak_kategori
+{ 
+			font-family: Tahoma, Verdana, Arial;
+			font-size: 10pt;
+			background-color:#51555f;
+			text-decoration:none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px; 
+}
+
+.kotak_pro_home
+{ 
+			font-family: Tahoma, Verdana, Arial;
+			font-size: 10pt;
+			border:1px;
+			border-color:#acbccc;
+			text-decoration:none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px; 
+}
+
+.judul {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 23pt;
+	font-weight:bold;
+	color: #587808;
+	text-decoration:none;
+}
+
+.isi {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 13pt;
+	font-weight:regular;
+	color: #587808;
+	text-decoration:none;
+}
+
+.angka {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 25pt;
+	color: #e1e1e1;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.angka_atas {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 25pt;
+	color: #1c5395;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.menu_item {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 14pt;
+	color: #e1e1e1;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.menu_item2 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:regular;
+	color: #e1e1e1;
+}
+
+.login {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 13pt;
+	color: #ffffff;
+	font-weight:bold;
+}
+
+.login2 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 11pt;
+	font-weight:bold;
+	color: #ffffff;
+}
+
+.login3 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:bold;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+.login4 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:regular;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+.news {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:bold;
+	color: #000000;
+	text-decoration:none;
+}
+
+.news2 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:regular;
+	color: #000000;
+	text-decoration:none;
+}
+
+.news3 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:bold;
+	color: #000000;
+	text-decoration:none;
+}
+
+.news4 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 9pt;
+	font-weight:bold;
+	color: #000000;
+	text-decoration:underline;
+}
+
+.news5 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 9pt;
+	font-weight:bold;
+	color: #4863a6;
+	text-decoration:underline;
+}
+
+
+.contact {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 11pt;
+	font-weight:bold;
+	color: #000000;
+	text-decoration:underline;
+}
+
+.menu_atas {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 10pt;
+	font-weight:bold;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+.jam {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 14pt;
+	font-weight:bold;
+	color: #000000;
+	text-decoration:none;
+}
+
+.bid {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 8pt;
+	font-weight:regular;
+	color: #000000;
+	text-decoration:none;
+}
+
+.note {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 10pt;
+	font-weight:bold;
+	color: #000000;
+	text-decoration:none;
+}
+
+
+.judul_info
+{ 
+			font-family: Tahoma, Verdana, Arial;
+			font-size: 15pt;
+			color:#ffffff;
+			font-weight:bold;
+			text-decoration:none;
+}
+
+.informasi {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 10pt;
+	font-weight:bold;
+	font-weight:regular;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+.informasi2 {
+	font-family: Tahoma, Verdama, Arial;
+	font-size: 10pt;
+	font-weight:regular;
+	color: #ffffff;
+	text-decoration:none;
+}
+
+

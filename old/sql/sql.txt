@@ -1,0 +1,134 @@
+-- phpMyAdmin SQL Dump
+-- version 3.1.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Apr 11, 2010 at 12:30 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6-1+lenny8
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `h64429_buntung`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kuisioner`
+--
+
+CREATE TABLE IF NOT EXISTS `kuisioner` (
+  `pert1` int(3) NOT NULL,
+  `pert2` int(3) NOT NULL,
+  `pert3` int(3) NOT NULL,
+  `pert4` varchar(50) NOT NULL,
+  `computer` int(3) NOT NULL,
+  `handphone` int(3) NOT NULL,
+  `gadget` int(3) NOT NULL,
+  `game` int(3) NOT NULL,
+  `lcd` int(3) NOT NULL,
+  `camera` int(3) NOT NULL,
+  `fashion` int(3) NOT NULL,
+  `kendaraan` int(3) NOT NULL,
+  `ebook` int(3) NOT NULL,
+  `furniture` int(3) NOT NULL,
+  `property` int(3) NOT NULL,
+  `home` int(3) NOT NULL,
+  `handmade` int(3) NOT NULL,
+  `pulsa` int(3) NOT NULL,
+  `lainnya` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kuisioner`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member`
+--
+
+CREATE TABLE IF NOT EXISTS `member` (
+  `id_member` int(10) NOT NULL auto_increment,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `gender` tinyint(1) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `hp` varchar(15) NOT NULL,
+  `kode_area` varchar(7) NOT NULL,
+  `telp` varchar(15) NOT NULL,
+  `id_tujuan` int(10) NOT NULL,
+  `alamat` text NOT NULL,
+  `referal` varchar(50) NOT NULL,
+  `token` varchar(100) NOT NULL,
+  `page` varchar(50) NOT NULL,
+  `status` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`id_member`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `member`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tujuan`
+--
+
+CREATE TABLE IF NOT EXISTS `tujuan` (
+  `id_tujuan` int(10) NOT NULL auto_increment,
+  `tujuan` varchar(50) NOT NULL,
+  `tarif` int(10) NOT NULL,
+  PRIMARY KEY  (`id_tujuan`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+
+--
+-- Dumping data for table `tujuan`
+--
+
+INSERT INTO `tujuan` (`id_tujuan`, `tujuan`, `tarif`) VALUES
+(1, 'JAYAPURA', 60000),
+(2, 'JEMBER', 19000),
+(3, 'KARAWANG', 7000),
+(4, 'KEDIRI', 17000),
+(5, 'KENDARI', 33000),
+(6, 'KUPANG', 38000),
+(7, 'MADIUN', 14000),
+(8, 'MAGELANG', 14000),
+(9, 'MAKASAR', 25000),
+(10, 'MALANG', 17000),
+(11, 'MANADO', 35000),
+(12, 'MATARAM', 19000),
+(13, 'MEDAN', 21000),
+(14, 'MOJOKERTO', 17000),
+(15, 'PADANG', 18000),
+(16, 'PALANGKARAYA', 23000),
+(17, 'PALEMBANG', 16000),
+(18, 'PALU', 30000),
+(19, 'PANDAAN', 16000),
+(20, 'PANGKAL PINANG', 16000),
+(21, 'PEKANBARU', 19000),
+(22, 'PONTIANAK', 20000),
+(23, 'PROBOLINGGO', 18000),
+(24, 'SAMARINDA', 31500),
+(25, 'SEMARANG', 12000),
+(26, 'SERANG', 7500),
+(27, 'SOLO', 12000),
+(28, 'SORONG', 60000),
+(29, 'SURABAYA', 13000),
+(30, 'TANGERANG', 5500),
+(31, 'TANJUNG PANDAN', 16000),
+(32, 'TANJUNG PINANG', 26000),
+(33, 'TARAKAN', 36000),
+(34, 'TERNATE', 40000),
+(35, 'TIMIKA', 70000),
+(36, 'JAKARTA', 5000),
+(37, 'BEKASI', 6000),
+(38, 'BANDUNG', 8000);

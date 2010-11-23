@@ -1,0 +1,948 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: May 23, 2010 at 06:43 PM
+-- Server version: 5.1.37
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `buntung_website`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about_us`
+--
+
+CREATE TABLE IF NOT EXISTS `about_us` (
+  `about_us` text NOT NULL,
+  `more_about` text NOT NULL,
+  `quote` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `about_us`
+--
+
+INSERT INTO `about_us` (`about_us`, `more_about`, `quote`) VALUES
+('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus. Duis rhoncus. Nulla facilisi. Fusce et libero. Mauris mattis. Duis vulputate. Vivamus ligula metus, molestie ut, feugiat eget, facilisis nec, felis. Duis fermentum felis eu risus tincidunt viverra. Duis dolor dolor, pretium ac, feugiat vitae, tincidunt interdum\r\nClass aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In eget massa. Maecenas vitae dolor. Morbi blandit volutpat turpis. Duis quis justo. Aliquam vulputate eros a mauris. Fusce pellentesque, eros quis vehicula fringilla, augue purus volutpat quam, vitae lacinia felis leo a turpis.\r\nPellentesque fermentum sapien et risus. Maecenas quis nibh eget neque convallis dictum. Nunc semper lorem ac enim. Maecenas pharetra ligula ullamcorper est. Nam accumsan nunc ac lacus. Sed eu leo. Nulla eget augue. Donec at nulla. Fusce lobortis, augue sed aliquet viverra, massa ipsum condimentum erat.', 'Aenean vel justo. Nunc sapien tellus, aliquet id, fringilla et, sagittis vel, risus. Quisque in enim mollis nulla vehicula vestibulum. Nunc vitae nunc. Etiam dui diam, fermentum sed, condimentum eget, iaculis in, odio. Sed placerat. Quisque aliquet mi ac felis. Aliquam nec mi. Nunc varius aliquet metus. Fusce luctus diam vitae libero', 'This is the blockquote Aenean vel justo. Nunc sapien tellus, aliquet id, fringilla et, sagittis vel, risus. Quisque in enim mollis nulla vehicula vestibulum. Nunc vitae nunc. Etiam dui diam, fermentum sed, condimentum eget, iaculis in, odio. Sed placerat. Quisque aliquet mi ac felis. Aliquam nec mi. Nunc varius aliquet metus. Fusce luctus diam vitae libero');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `idid` int(100) NOT NULL AUTO_INCREMENT,
+  `user_id` varchar(50) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `status` tinyint(2) NOT NULL DEFAULT '2',
+  `lastlogin` datetime NOT NULL,
+  PRIMARY KEY (`idid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`idid`, `user_id`, `password`, `status`, `lastlogin`) VALUES
+(5, 'admin', '8ead19ac784929f84da7a71f30de2049', 2, '2010-05-23 12:49:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `berita_ringan`
+--
+
+CREATE TABLE IF NOT EXISTS `berita_ringan` (
+  `brid` int(5) unsigned NOT NULL AUTO_INCREMENT,
+  `judul_berita` varchar(200) NOT NULL,
+  `isi_berita` text NOT NULL,
+  `tgl_berita` datetime NOT NULL,
+  `gambar_news` varchar(200) NOT NULL,
+  PRIMARY KEY (`brid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `berita_ringan`
+--
+
+INSERT INTO `berita_ringan` (`brid`, `judul_berita`, `isi_berita`, `tgl_berita`, `gambar_news`) VALUES
+(1, 'Twitter Dominasi Penggunaan Kata Berbahasa Inggris  ', 'Kepopuleran situs mikroblogging Twitter semakin menanjak. Dengan banyaknya orang yang bergabung dalam situs ini dan tweet-tweet yang sering menjadi berita, semua itu menghantarkan Twitter menjadi kata yang paling populer di ranah bahasa Inggris.<br><br>&#039;Kemenangan&#039; Twitter sebagai kata terpopuler ini dikuak oleh Global Languange Monitor yang mempelajari mengenai internet dan media selama 12 bulan. Perusahaan yang berbasis di Texas tersebut merekam kata apa yang paling banyak digunakan di dunia maya ini.<br><br>Dan di antara banyaknya kejadian politik, bencana alam dan penyakit menular, tidak menjadikan kata &#039;Twitter&#039; tenggelam di antara kata-kata yang berkaitan dengan kejadian-kejadian tersebut.<br><br>&#039;Twitter&#039; masih menjadi yang paling banyak dipakai di internet, mengalahkan kepopuleran kata &#039;Barack Obama&#039; di posisi ke-2 dan &#039;H1N1&#039; di urutan selanjutnya.<br><br>Dikutip detikINET dari Telegraph, Senin (30/11/2009), Paul Payack dari GLM mengatakan, dalam tahun yang didominasi oleh banyak kejadian politik dan tsunami, kata Twitter masih melesat di antara itu semua.<br><br>Situs mikroblogging yang mengijinkan 20 juta penggunanya menyebarkan pesan 140 karakter ke seluruh penjuru dunia ini memang menjadi fenomena internet yang luar biasa. Hal ini tentu tak lepas dari layanan yang ia tawarkan dan kekuatan yang menyertainya.', '2009-11-30 00:00:00', '02mm_twitter.jpg'),
+(2, 'Game Call of Duty Raup Rp 28 Triliun', 'Activision Blizzard Inc. sangat puas dengan performa penjualan game &#039;Call of Duty&#039;. Bayangkan saja, hasil penjualannya di seluruh dunia sampai menembus angka US$ 3 miliar atau setara dengan Rp 28,3 triliun.<br><br>Dengan demikian, sejak hari kelahirannya pada 2003 lalu, game bertipe first-person shooter ini sudah terjual sebanyak 55 juta kopi di berbagai belahan dunia.<br><br>Activision mengatakan, angka-angka mentereng tersebut bukanlah hasil klaim mereka sepihak. Dikutip detikINET dari Reuters, Minggu (29/11/2009), data ini diambil dari kompilasi hasil riset besutan lembaga analis NPD Group, Charttrack, GfK dan prediksi internal perusahaan.<br><br>Sebelumnya, seri keenam dari game ini -- Call of Duty: Modern Warfare 2 -- yang baru diluncurkan di awal bulan ini juga telah memecahkan rekor.<br><br>Dalam lima hari pertama kehadirannya di pasar, game itu berhasil meraup US$ 550 juta dari hasil penjualannya. Sementara khusus di Amerika Serikat dan Inggris, untuk hari pertama saja mampu mencatat penjualan hingga 4,7 juta kopi.<br><br>&quot;Jika Anda membayangkan berapa gamer yang memainkan Call of Duty, sama seperti melihat acara hiburan yang paling banyak ditonton di era modern ini,&quot; umbar Chief Executive Activision, Bobby Kotick.', '2009-11-30 00:00:00', '02call_of_duty_4.jpg'),
+(3, 'Game Jadi Alat Pecahkan Kasus Kriminal  ', 'Teknologi di balik game ternyata bisa dimanfaatkan untuk memecahkan kasus-kasus kriminal yang sedang ditangani kepolisian. Upaya itu yang sedang dilakukan oleh beberapa peneliti di North Carolina.<br><br>Adalah peneliti dari North Carolina State University, Amerika Serikat, yang sedang mengembangkan sebuah teknologi yang menggunakan basis game engine untuk membantu tim forensik memecahkan kasus kriminal.<br><br>Penelitian itu akan memanfaatkan game engin Unity untuk menciptakan sebuah Tempat Kejadian Perkara (TKP) virtual. Agar akurat, TKP virtual itu memanfaatkan data yan didapatkan dari pemindaian tiga dimensi berbasis laser pada TKP sesungguhnya.<br><br>Nantinya, TKP Virtual itu akan bisa digabungkan dalam sebuah halaman web bersama dengan informasi lainnya seperti sidik jari, tes DNA dan catatan penyelidik. &quot;Masalah yang ada saat ini adalah, memang ada perkembangan terbaru di bidang teknologi forensik, namun cara tim penyelidik berkolaborasi tak banyak berubah,&quot; ujar peneliti Dr. Mitzi Montoya, yang dikutip detikINET dari reuters, Senin (30/11/2009).<br><br>Kampus North Carolina State University telah mendapatkan bantuan sebesar USD 1.4 juta dari National Science Foundation untuk mengembangkan piranti kolaborasi forensik ini. Teknologi yang mereka kembangkan bernama &#039;interdisciplinary, cyber-enabled crime reconstruction through innovative methodology and engagement&#039; alias IC-CRIME.<br><br>Game engine Unity yang digunakan dalam IC-CRIME telah lama digunakan dalam berbagai game. Unity memang tak sepopuler game engine lain seperti Unreal atau Source (game engine yang dipakai Counter Strike), namun Unity kerap digunakan untuk menghadirkan teknologi 3D di web.', '2009-11-30 00:00:00', '39crimescene285.jpg'),
+(4, 'XL Bangun Jaringan Timur Indonesia Tanpa Konsorsium  ', 'XL Axiata menyatakan tetap akan memperkuat infrastruktur jaringan telekomunikasi di kawasan timur Indonesia meski untuk sementara waktu tak ikut bergabung dalam konsorsium Palapa Ring.<br><br>Presiden Direktur XL Hasnul Suhaimi, mengatakan perluasan jaringan di kawasan itu akan dilakukan melalui pembangunan serat optik di Sulawesi dan infrastruktur base transceiver station (BTS) di daerah Maluku, Maluku Utara, Papua dan Nusa Tenggara Timur.<br><br>&quot;Kami juga ingin mendorong tersedianya akses telekomunikasi dan data yang murah di kawasan timur Indonesia agar masyarakat setempat bisa ikut menikmati layanan internet untuk memajukan daerahnya,&quot; ujarnya, Senin (30/11/2009).<br><br>Dari tujuh perusahaan yang semula bergabung dalam konsorsium, XL menjadi perusahaan terakhir yang mundur dari Palapa Ring. Alhasil, pembangun tulang punggung telekomunikasi di kawasan itu tinggal menyisakan tiga perusahaan saja, yaitu Telkom, Indosat dan Bakrie Telecom.<br><br>Dari tiga perusahaan terakhir, adalah Telkom yang berinisiatif untuk menggelar pembangunan lebih dulu melalui jalur Mataram-Kupang. Pembangunan ini diresmikan Presiden Susilo Bambang Yudhoyono melalui video conference dari Istana Negara, Jakarta.', '2009-11-30 00:00:00', '12palaparing200.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `booking`
+--
+
+CREATE TABLE IF NOT EXISTS `booking` (
+  `id_booking` int(10) NOT NULL AUTO_INCREMENT,
+  `id_product` int(10) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `token` varchar(20) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `tanggal` datetime NOT NULL,
+  `harga_booking` varchar(20) NOT NULL,
+  `tanggal_konfirmasi` datetime NOT NULL,
+  `nama_bank` varchar(200) NOT NULL,
+  `nomor_rekening` varchar(20) NOT NULL,
+  `atas_nama` varchar(30) NOT NULL,
+  `tranfer_ke` varchar(30) NOT NULL,
+  `tanggal_approve` datetime NOT NULL,
+  `admin` varchar(20) NOT NULL,
+  `tanggal_tolak` datetime NOT NULL,
+  `menang` tinyint(1) NOT NULL DEFAULT '0',
+  `convert_a` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_booking`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`id_booking`, `id_product`, `username`, `token`, `status`, `tanggal`, `harga_booking`, `tanggal_konfirmasi`, `nama_bank`, `nomor_rekening`, `atas_nama`, `tranfer_ke`, `tanggal_approve`, `admin`, `tanggal_tolak`, `menang`, `convert_a`) VALUES
+(1, 19, 'carinoz', '193501230', 2, '2010-05-23 13:48:23', '13010000', '2010-05-23 14:02:18', 'Bank Central Asia', '4787978979', 'Darwin Susanto', 'Bank Central Asia', '2010-05-23 15:37:41', 'admin', '2010-05-23 14:22:35', 1, 0),
+(2, 19, 'carinoz', '193504827', 2, '2010-05-23 15:38:58', '13010000', '2010-05-23 15:39:49', 'aaaaaaaa', '22222222', 'cccccccccccccc', 'Bank Central Asia', '2010-05-23 15:48:42', 'admin', '0000-00-00 00:00:00', 1, 0),
+(3, 5, 'carinoz', '53491316', 1, '2010-05-23 15:50:36', '410000', '2010-05-23 16:18:16', 'afdasfda', 'dasfdasfa', 'fdafaf', 'Bank Mandiri', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(4, 5, 'clayderine', '53494893', 0, '2010-05-23 15:51:13', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(5, 5, 'andry', '53493647', 0, '2010-05-23 15:51:30', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(6, 5, 'michaelam', '53492513', 0, '2010-05-23 16:02:01', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(7, 5, 'kaoji', '53494122', 0, '2010-05-23 16:02:09', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(8, 5, 'lwsssk', '53493921', 0, '2010-05-23 16:02:15', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(9, 5, 'shamanss', '53491730', 0, '2010-05-23 16:02:25', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(10, 5, 'gothnanah', '53492523', 0, '2010-05-23 16:03:03', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(11, 5, 'nanagot', '53493512', 0, '2010-05-23 16:04:07', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0),
+(12, 5, 'metjhang', '53494246', 0, '2010-05-23 16:04:16', '410000', '0000-00-00 00:00:00', '', '', '', '', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_us`
+--
+
+CREATE TABLE IF NOT EXISTS `contact_us` (
+  `id_contact` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) COLLATE latin1_general_ci NOT NULL,
+  `email` varchar(100) COLLATE latin1_general_ci NOT NULL,
+  `judul` varchar(200) COLLATE latin1_general_ci NOT NULL,
+  `isi` text COLLATE latin1_general_ci NOT NULL,
+  `tanggal_masuk` datetime NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0 Blm | 1 Sudah',
+  PRIMARY KEY (`id_contact`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`id_contact`, `nama`, `email`, `judul`, `isi`, `tanggal_masuk`, `status`) VALUES
+(4, 'darwin', 'legality_dars@yahoo.com', 'Test', 'Test', '2010-05-09 23:16:16', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail_contact`
+--
+
+CREATE TABLE IF NOT EXISTS `detail_contact` (
+  `id_detail_contact` tinyint(1) NOT NULL,
+  `alamat` varchar(200) NOT NULL,
+  `gmail` varchar(50) NOT NULL,
+  `yahoo` varchar(50) NOT NULL,
+  `msn` varchar(50) NOT NULL,
+  `telp_office` varchar(15) NOT NULL,
+  `fax` varchar(15) NOT NULL,
+  `mobile` varchar(15) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detail_contact`
+--
+
+INSERT INTO `detail_contact` (`id_detail_contact`, `alamat`, `gmail`, `yahoo`, `msn`, `telp_office`, `fax`, `mobile`) VALUES
+(1, 'Jalan Jendral Sudirman Kav 16 Jakarta  Indonesia 98765', 'Yourname@gmail.com', 'Yourname@yahoo.com', 'Yourname@msn.com', '021-123456 ', '021-789123 ', '081123456789');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `email`
+--
+
+CREATE TABLE IF NOT EXISTS `email` (
+  `email` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `email`
+--
+
+INSERT INTO `email` (`email`) VALUES
+('abc@buntung.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `harga_poin`
+--
+
+CREATE TABLE IF NOT EXISTS `harga_poin` (
+  `id` tinyint(1) NOT NULL,
+  `harga_poin` varchar(30) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `harga_poin`
+--
+
+INSERT INTO `harga_poin` (`id`, `harga_poin`) VALUES
+(1, '10000');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `how`
+--
+
+CREATE TABLE IF NOT EXISTS `how` (
+  `id` tinyint(1) NOT NULL,
+  `ket` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `how`
+--
+
+INSERT INTO `how` (`id`, `ket`) VALUES
+(1, 'New and high-quality products are added to our auction portal daily. To participate in auctions, you must register with the site. You can do this easily by clicking the ‘register’ button and following the subsequent instructions.<br><br>To place a bid, you need credits. We offer you the possibility of purchasing different Credit packages. <br><br>If you are awarded the item, you can conveniently pay with your credit card. Unfortunately, you cannot pay for the item with your Credits as they are exclusively used for making bids.<br><br>All auctions are presented for a limited time only. You can bid using any number of 25-cent increments (i.e. US$1, $1.25 , $2.50 etc.). The user who has placed the sole lowest bid acquires the item. <br><br>An example: Several bids have been placed for $0.25, $1.00, $1.75, $4.25 and $5.00. The amounts of $1.75 and $4.25 were not yet placed, whereas if you placed the last and only bid in the amount of $1.75, prior to the close of the auction, then it would be both the lowest and sole bid, and is therefore awarded the auction item. However, if another user also places a bid of $1.75 in the course of the auction, this amount is no longer unique. Now, in our example, the $4.25 bidder would be the final buyer, as their bid is now the lowest single bid placed. <br><br>It is possible to place single bids, or to cover an entire span of bids (max. 1000 bids per span). However, in order to guarantee equal opportunity, only single bids will be accepted in the last five minutes before the end of an auction. <br><br>If an auction does not produce a unique bid at its conclusion, then nobody is the final buyer and the auction starts again. If an auction results in a unique bid at its conclusion, the user with the lowest single bid is determined and then informed by email. The awardee can subsequently order and pay for the auctioned item in his member area (prices include sales tax, plus shipping charges). Goods are shipped by DUBLICOM Ltd., which is also the recipient of payments; items are sent as soon as payment has been received.<br><br>A single user may only be the final buyer in up to five “DubLi Auctions in one month. Therefore, once the member has placed five final bids (both lowest and unique), further bids will not be accepted. As soon as this user has been underbid in an auction, the placement of further bids is automatically accepted, until the maximum number of five successful final bids has been attained. Once a user has been awarded an auction, s/he may only participate in a further four auctions, et cetera. The number of awarded auctions, as well as the number of remaining auctions available in which to participate, can be accessed at any time in your back office. At the beginning of a new calendar month, the maximum number of five successful auctions is available to you once again. This is indicated in your member area in the form of a stoplight. If the stoplight displays, for example, a “red light”, you can only place a bid again in the next calender month.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `instant_buy`
+--
+
+CREATE TABLE IF NOT EXISTS `instant_buy` (
+  `id_ib` int(10) NOT NULL AUTO_INCREMENT,
+  `id_product` int(10) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `token` varchar(20) NOT NULL,
+  `tanggal_update` datetime NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `nomor_resi` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_ib`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `instant_buy`
+--
+
+INSERT INTO `instant_buy` (`id_ib`, `id_product`, `username`, `token`, `tanggal_update`, `status`, `nomor_resi`) VALUES
+(1, 21, 'carinoz', '51006685', '2010-05-23 12:50:14', 1, ''),
+(2, 6, 'carinoz', '2978137', '2010-05-23 16:16:33', 1, '12345'),
+(3, 5, 'carinoz', '3497255', '2010-05-23 16:02:29', 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kategori`
+--
+
+CREATE TABLE IF NOT EXISTS `kategori` (
+  `id_kategori` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `deskripsi` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_kategori`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `deskripsi`) VALUES
+(1, 'Gift Cards'),
+(2, 'Computer &amp; Acc'),
+(3, 'Cellulars &amp; Navigation'),
+(4, 'Household'),
+(5, 'Game Consoles'),
+(6, 'TV &amp; Movies'),
+(7, 'Audio'),
+(8, 'Photo &amp; Camcorder'),
+(9, 'For Her'),
+(10, 'For Him'),
+(11, 'For Kids'),
+(12, 'Australia &amp; NZ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `log`
+--
+
+CREATE TABLE IF NOT EXISTS `log` (
+  `id_log` int(100) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `admin` varchar(20) NOT NULL,
+  `tanggal` datetime NOT NULL,
+  `ket` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_log`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=76 ;
+
+--
+-- Dumping data for table `log`
+--
+
+INSERT INTO `log` (`id_log`, `username`, `admin`, `tanggal`, `ket`) VALUES
+(3, 'carinoz', '', '2010-05-18 12:45:03', 'KONFIRMASI PEMBAYARAN'),
+(2, 'carinoz', '', '2010-05-18 12:43:04', 'PEMESANAN PEMBELIAN POIN'),
+(4, 'carinoz', 'admin', '2010-05-18 12:45:54', 'APPROVE PEMBELIAN POIN'),
+(5, 'carinoz', 'admin', '2010-05-18 12:47:49', 'PEMBAYARAN POIN TIDAK VALID'),
+(6, 'carinoz', '', '2010-05-23 10:53:21', 'SHOW PRICE Microsoft Xbox 360 Game Console'),
+(7, 'carinoz', '', '2010-05-23 11:55:47', 'INSTANT BUY Microsoft Xbox 360 Game Console'),
+(15, 'admin', '', '2010-05-23 12:47:33', 'APPROVE INSTANT BUY'),
+(14, 'carinoz', '', '2010-05-23 12:14:15', 'INSTANT BUY Sony PlayStation 3 slim 120GB'),
+(13, 'carinoz', '', '2010-05-23 12:14:03', 'SHOW PRICE Sony PlayStation 3 slim 120GB'),
+(12, 'carinoz', '', '2010-05-23 12:06:33', 'INSTANT BUY Microsoft Xbox 360 Game Console'),
+(17, 'carinoz', 'admin', '2010-05-23 12:50:14', 'APPROVE INSTANT BUY'),
+(18, 'carinoz', '', '2010-05-23 12:55:56', 'SHOW PRICE Macbook Pro'),
+(19, 'carinoz', '', '2010-05-23 12:56:31', 'SHOW PRICE Delonghi Magnifica Super Automatic ESAM'),
+(20, 'carinoz', '', '2010-05-23 12:56:39', 'SHOW PRICE Lands&#039; End Gift Card $100'),
+(21, 'carinoz', '', '2010-05-23 12:56:56', 'SHOW PRICE $25 Boston Market Gift Card'),
+(22, 'carinoz', '', '2010-05-23 12:57:03', 'SHOW PRICE Bose Mobile On-Ear Headset'),
+(23, 'carinoz', '', '2010-05-23 12:58:08', 'SHOW PRICE $25 Boston Market Gift Card'),
+(24, 'carinoz', '', '2010-05-23 12:59:27', 'SHOW PRICE Bose Mobile On-Ear Headset'),
+(25, 'carinoz', '', '2010-05-23 13:14:34', 'INSTANT BUY Delonghi Magnifica Super Automatic ESA'),
+(26, 'carinoz', '', '2010-05-23 13:15:56', 'SHOW PRICE Macbook Pro'),
+(27, 'carinoz', '', '2010-05-23 13:38:37', 'BOOKING Macbook Pro'),
+(28, 'carinoz', '', '2010-05-23 13:39:20', 'BOOKING Macbook Pro'),
+(29, 'carinoz', '', '2010-05-23 13:42:19', 'BOOKING Macbook Pro'),
+(30, 'carinoz', '', '2010-05-23 13:42:27', 'BOOKING Macbook Pro'),
+(31, 'carinoz', '', '2010-05-23 13:42:39', 'BOOKING Macbook Pro'),
+(32, 'carinoz', '', '2010-05-23 13:44:02', 'BOOKING Macbook Pro'),
+(33, 'carinoz', '', '2010-05-23 13:44:26', 'BOOKING Macbook Pro'),
+(34, 'carinoz', '', '2010-05-23 13:48:23', 'BOOKING Macbook Pro'),
+(35, 'carinoz', '', '2010-05-23 14:02:18', 'KONFIRMASI PEMBAYARAN BOOKING'),
+(36, 'carinoz', 'admin', '2010-05-23 14:15:06', 'APPROVE BOOKING Macbook Pro'),
+(37, 'carinoz', 'admin', '2010-05-23 14:22:35', 'KONFIRMASI BOOKING LATE'),
+(38, 'carinoz', 'admin', '2010-05-23 15:00:04', 'APPROVE BOOKING Macbook Pro'),
+(45, 'carinoz', '', '2010-05-23 15:38:58', 'BOOKING Macbook Pro'),
+(44, 'carinoz', '', '2010-05-23 15:38:53', 'SHOW PRICE Macbook Pro'),
+(43, 'carinoz', 'admin', '2010-05-23 15:37:41', 'APPROVE BOOKING Macbook Pro'),
+(46, 'carinoz', '', '2010-05-23 15:39:49', 'KONFIRMASI PEMBAYARAN BOOKING'),
+(47, 'carinoz', 'admin', '2010-05-23 15:41:35', 'APPROVE BOOKING Macbook Pro'),
+(48, 'carinoz', 'admin', '2010-05-23 15:48:42', 'APPROVE BOOKING Macbook Pro'),
+(49, 'carinoz', '', '2010-05-23 15:50:29', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(50, 'carinoz', '', '2010-05-23 15:50:36', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(51, 'carinoz', '', '2010-05-23 15:51:10', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(52, 'carinoz', '', '2010-05-23 15:51:13', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(53, 'carinoz', '', '2010-05-23 15:51:26', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(54, 'carinoz', '', '2010-05-23 15:51:30', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(55, 'carinoz', '', '2010-05-23 15:52:15', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(56, 'carinoz', '', '2010-05-23 16:02:01', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(57, 'carinoz', '', '2010-05-23 16:02:06', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(58, 'carinoz', '', '2010-05-23 16:02:09', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(59, 'carinoz', '', '2010-05-23 16:02:12', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(60, 'carinoz', '', '2010-05-23 16:02:15', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(61, 'carinoz', '', '2010-05-23 16:02:20', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(62, 'carinoz', '', '2010-05-23 16:02:25', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(63, 'carinoz', '', '2010-05-23 16:02:29', 'INSTANT BUY Artisan Kitchenaid Stand Mixer in blac'),
+(64, 'carinoz', '', '2010-05-23 16:02:58', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(65, 'carinoz', '', '2010-05-23 16:03:03', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(66, 'carinoz', '', '2010-05-23 16:04:00', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(67, 'carinoz', '', '2010-05-23 16:04:07', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(68, 'carinoz', '', '2010-05-23 16:04:11', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(69, 'carinoz', '', '2010-05-23 16:04:16', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(70, 'carinoz', '', '2010-05-23 16:04:19', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(71, 'carinoz', '', '2010-05-23 16:04:26', 'BOOKING Artisan Kitchenaid Stand Mixer in black'),
+(72, 'carinoz', '', '2010-05-23 16:04:34', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(73, 'carinoz', '', '2010-05-23 16:08:31', 'SHOW PRICE Artisan Kitchenaid Stand Mixer in black'),
+(74, 'carinoz', 'admin', '2010-05-23 16:16:33', 'APPROVE INSTANT BUY'),
+(75, 'carinoz', '', '2010-05-23 16:18:16', 'KONFIRMASI PEMBAYARAN BOOKING');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `matauang`
+--
+
+CREATE TABLE IF NOT EXISTS `matauang` (
+  `idmatauang` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `matauang` varchar(25) NOT NULL,
+  PRIMARY KEY (`idmatauang`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `matauang`
+--
+
+INSERT INTO `matauang` (`idmatauang`, `matauang`) VALUES
+(1, 'IDR');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member`
+--
+
+CREATE TABLE IF NOT EXISTS `member` (
+  `id_member` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `gender` tinyint(1) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `hp` varchar(15) NOT NULL,
+  `kode_area` varchar(7) NOT NULL,
+  `telp` varchar(15) NOT NULL,
+  `id_tujuan` int(10) NOT NULL,
+  `alamat` text NOT NULL,
+  `referal` varchar(50) NOT NULL,
+  `token` varchar(100) NOT NULL,
+  `page` varchar(50) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `lastlogin` datetime NOT NULL,
+  PRIMARY KEY (`id_member`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=252 ;
+
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`id_member`, `username`, `password`, `email`, `gender`, `nama`, `hp`, `kode_area`, `telp`, `id_tujuan`, `alamat`, `referal`, `token`, `page`, `status`, `lastlogin`) VALUES
+(1, 'carinoz', '00f4a3624ba47d4110af6b99b53eb655', 'legality_dars@yahoo.com', 1, 'Darwin Susanto', '0817242142', '021', '95031303', 36, 'Kemanggisan', '', '04212010104522carinoz@reg-buntung.com', 'ac24a35d5fa201a1370e2d378a318489', 1, '2010-05-23 12:52:46'),
+(2, 'clayderine', 'ae710562709288504fa962270b06c847', 'fernandohalim@yahoo.com', 1, 'Fernando Halim', '0817118018', '', '', 36, 'Kos Brownies\r\nJalan U Raya No 7B\r\nRT 9 / RW 15\r\nKEc n Kel Palmerah\r\nJKT 11480', '', '04282010104644clayderine@reg-buntung.com', '06954a6130855d6f331fefa9f67025f8', 0, '0000-00-00 00:00:00'),
+(3, 'andry', '91cb315a6405bfcc30e2c4571ccfb8ce', 'dryz_87@yahoo.com', 1, 'andry', '081932645316', '021', '52365215', 36, 'Jl.U no.6.kemanggisan,palmerah.jakarta barat', '', '04282010105052andry@reg-buntung.com', 'de0ad16c3a29fb20c3b21dd005bb525b', 0, '0000-00-00 00:00:00'),
+(4, 'michaelam', 'd489a3289ecdc847cb67f7a480e6f9fa', 'coli_nggaceng_aja@yahoo.com', 1, 'michael lam', '0818968289', '', '', 38, 'Kos binus', '', '04282010110230michaelam@reg-buntung.com', 'd4c5dea0ce3e88ac57b5dd1909ac1b2f', 0, '0000-00-00 00:00:00'),
+(5, 'kaoji', '818c098ebcc8b723525f06f66a74f8da', 'mike_kaoji@yahoo.com', 1, 'christofle michael joy tawas', '081807000100', '', '', 36, 'jakarta', '', '04282010110933kaoji@reg-buntung.com', 'bcf8ed5dcbdb212ef19f3ab270c1713f', 1, '0000-00-00 00:00:00'),
+(6, 'lwsssk', '387c19b5a854cb5021a11759aefee4ce', 'lwsssk@yahoo.com', 1, 'Louis', '0817123567', '021', '8223815', 36, 'Tebet Timur 1 No 12', '', '04282010110950lwsssk@reg-buntung.com', '71f53268a60fda2b388db71e6989b760', 1, '0000-00-00 00:00:00'),
+(7, 'shamanss', '25f9e794323b453885f5181f1b624d0b', 'cr_1_cr_6@yahoo.com', 1, 'Rinaldi', '08170464346', '', '', 38, 'JL. Keluarga 36, Kemanggisan, Jakarta Barat', '', '04282010112052shamanss@reg-buntung.com', '16ffe25ffd0131b66cf53257f0b7f7f6', 0, '0000-00-00 00:00:00'),
+(8, 'gothnanah', 'd489a3289ecdc847cb67f7a480e6f9fa', 'melvent_180@yahoo.co.id', 1, 'michael lam', '0818968289', '', '', 38, 'kos binus', '', '04292010010412gothnanah@reg-buntung.com', '9439f5da3694561f1000b9e73dc40bab', 0, '0000-00-00 00:00:00'),
+(9, 'nanagot', '0da7e566a0af3af916778990c7d6889f', 'lynx37@yahoo.com', 1, 'pribadi hernanda', '087888000150', '', '', 36, 'Tanjung Duren Jl. Delima V No. 31', '', '04292010011113nanagot@reg-buntung.com', '6bda3acd85d96f10ff59ba86b7089a0d', 1, '0000-00-00 00:00:00'),
+(10, 'metjhang', '89c19b7bef07bac627014aaf89af93f4', 'im_melzzz@hotmail.com', 2, 'Melisa', '08989211870', '', '', 38, 'modernland', '', '04292010013832metjhang@reg-buntung.com', '7607e3efb901136df8f58e753ada7bce', 1, '0000-00-00 00:00:00'),
+(11, 'orcharysie', 'd122d8ccb48c21175376e9dd9627bfe4', 'hiporain@yahoo.com', 2, 'Lanny', '08993696139', '', '', 29, 'barata jaya 3/82', 'nanagot', '04292010014845orcharysie@reg-buntung.com', '4505798f3ea48395095e46eb23e2d2d6', 0, '0000-00-00 00:00:00'),
+(12, 'dfr77', '7693a0c56fb42d165f67504a85c5a163', 'dfr77@yahoo.co.id', 1, 'Dian Fitri Rahadi', '081350770818', '', '', 24, 'Jl. KS. Tubun RT 08 - Kel Bontang Kuala Kec Bontang Utara - Kota Bontang - 75314', '', '04292010082658dfr77@reg-buntung.com', '8b0b7c327a015adba67e4c65173c73f2', 0, '0000-00-00 00:00:00'),
+(13, 'vonso', '7d8dfddd4e2955bb595c9be5bf2b1f49', 'alvonso31@gmail.com', 1, 'Ponco Wibowo', '021-91842886', '', '', 36, 'Aldevco Octagon Building - Lantai 2 Jl. Warung Buncit Raya No.75 Jakarta Selatan 12740', '', '04292010032216vonso@reg-buntung.com', '39edce2ba7214c164af2f77c0913ee83', 1, '0000-00-00 00:00:00'),
+(14, 'bay_oz', '91eeed6de814d442c3faec585f8b7fac', 'bayusuwarninghadi2@gmail.com', 1, 'bayu suwarning hadi', '081322872337', '', '', 38, 'jalan raya serpong ruko tol boulevard blok E 11 BSD city tangerang', '', '04292010032522bay_oz@reg-buntung.com', 'd5fcf8260d54291479358198b287e4e6', 1, '0000-00-00 00:00:00'),
+(15, 'andhana', '8273f372412253fa8041ae215e2e2d51', 'dimas_andhana@yahoo.com', 1, 'Dimas Andhana', '02191353953', '', '', 38, 'Pondok Gede, Bekasi', '', '04292010032659andhana@reg-buntung.com', 'cf46cdbec543735fd73cff5318629b4a', 0, '0000-00-00 00:00:00'),
+(16, 'aprilian', '068aa9e0404facf1cdadf8243ba53f55', 'deniapril@gmail.com', 1, 'Deni Aprilian', '08996179708', '', '', 38, 'Jalan Pahalawan Gg. Senang Rahayu', '', '04292010032853aprilian@reg-buntung.com', '1b0d746b778413e409a14882de53598b', 1, '0000-00-00 00:00:00'),
+(17, 'imadio', 'a87743fe9ca9ee68b64ab9e6a654ba95', 'aqil.imad@yahoo.co.id', 1, 'imad', '085780787480', '021', '7756537', 38, 'jl.ciliwung rt 05/01 no.54 beji depok', '', '04292010033127imadio@reg-buntung.com', 'e206422f28fe436d702d26009ddf0223', 0, '0000-00-00 00:00:00'),
+(18, 'eleventh', 'f7fecda3f334dbde4a956c205a8bca66', 'eleventh.avenue@yahoo.com', 1, 'wenry', '083896363659', '', '', 36, 'Empang bahagia No 1H, Jelambar \r\nJakBar-11460', '', '04292010034129eleventh@reg-buntung.com', '2c02be7dbf2db900f75469ab7be2598c', 1, '0000-00-00 00:00:00'),
+(19, 'ikhwanul', 'bb1afb07b02a45d8432cbabed0d6224a', 'ainoel_tjepp@live.com', 1, 'ikhwanul muslimun', '+6281929478098', '0711', '822471', 38, 'jalan sapta marga komplek pln no.6 rt.36,rw.007,kel. bukit sangkal,kec.kalidoni,kode pos :30114', '', '04292010040514ikhwanul@reg-buntung.com', '227667e232ce0ac4a79d98fb151b5fdb', 0, '0000-00-00 00:00:00'),
+(20, 'chandra', '2e41d82c662395c35ba932039cbd2af2', 'hancurmina47@yahoo.co.id', 1, 'chandra hutagaol', '0812 600 74 100', '', '', 38, 'salemba tengah 3. Gg. 6 (enam) no 27A.\r\nJAKPUS.', '', '04292010041817chandra@reg-buntung.com', '7a7491a246473b0d31f64084511f2926', 0, '0000-00-00 00:00:00'),
+(21, 'angga', '8e7e4b0255ffdfde2a31a72ec64b87e7', 'unholy4soul@yahoo.com', 1, 'angga setyadi', '081931732210', '021', '5903978', 38, 'kp cilongok ds sukamantri rt 02/04 no 4 pasar kemis tangerang.', '', '04292010042441angga@reg-buntung.com', '2374a65e0a795efacfa1e79c4cc29fbd', 0, '0000-00-00 00:00:00'),
+(22, 'oasindo', '7997f0298ea6c48164696c7638e2a64d', 'kurniawan.yusuf@gmail.com', 1, 'LALU YUSUF KURNIAWAN', '08159701423', '021', '4412234', 36, 'Jl.Kebantenan No.11 Rt:01/07 Cilincing Jakarta Utara 14130', '', '04292010042934oasindo@reg-buntung.com', '6923393558a008855574c9d48cec31ad', 0, '0000-00-00 00:00:00'),
+(23, 'rino', 'c2d555e6ba13ab259c81daa4b05649e6', 'delicious_rino15@rocketmail.com', 1, 'alousius marino', '081809639152', '', '', 38, 'komp.padasuka indah II D.15', '', '04292010043317rino@reg-buntung.com', 'ed58700180f316172e24b8868c11e14a', 0, '0000-00-00 00:00:00'),
+(24, 'hutagaol', 'ad845a24a47deecbfa8396e90db75c6a', 'huta.gaol@yahoo.com', 1, 'chandra hutagaol', '0812 600 74 100', '', '', 36, 'Salemba Tengah 3 Gg.6 No.27 A. Kost Ibu. Sugi.', '', '04292010043921hutagaol@reg-buntung.com', 'efa400d1a5a401a48543a5bfe370ca63', 0, '0000-00-00 00:00:00'),
+(25, 'arfenol', '4f3e9af43be28d8e49307849c9faec38', 'as.venol@yahoo.co.id', 1, 'Arfenol', '085278769584', '', '', 21, 'Jl. jend. sudirman Gg. Citra no. 02\r\nDuri - Riau', 'bay_oz', '04292010044843arfenol@reg-buntung.com', 'b725107d36aa015d30c9f15e91d22697', 1, '0000-00-00 00:00:00'),
+(26, 'kutil2007', '2f7e23c9db57ce1fa5fa1eda6143823f', 'kuyus_nduth131205@yahoo.co.id', 1, 'Andrew', '085888934608', '021', '84976443', 36, 'Jl. Radar Utara No. 8a Rt. 05/09 No. 8a Cipinang Melayu, Makasar, Jakarta Timur 13620', 'bay_oz', '04292010045955kutil2007@reg-buntung.com', '94db2ce8497843ba65689b6ee7d5d9df', 1, '0000-00-00 00:00:00'),
+(27, 'optimus', '2a1818b7334705f91c92ac6ccaea44c7', 'rifki_aissix2@yahoo.com', 1, 'rifki', '085715398963', '', '', 36, 'curug tangerang', 'bay_oz', '04292010045958optimus@reg-buntung.com', '094d1522aa9cc652877e55daf6a0596a', 0, '0000-00-00 00:00:00'),
+(28, 'ankzzzzdhe', '81c6e2dec9c0d2adb3e5d8998503ab66', 'the_jayuzzzz_man@yahoo.co.id', 1, 'Ilham Akbar Adhiguna Erlangga', '085640414655', '024', '6925834', 25, 'Jl. Mayjend Sutoyo No. 50\r\nUngaran 50514', 'bay_oz', '04292010052538ankzzzzdhe@reg-buntung.com', '4a51035e573ecc20d0f0b63cd1c2267b', 0, '0000-00-00 00:00:00'),
+(29, 'chendy', 'd4a71763498268f8ce801841a6ce7ccb', 'senndhie@yahoo.com', 1, 'senndhie christian rantung', '9877 6323', '021', '460 0387', 36, 'Jl. Raya Bekasi Km.21\r\nPulogadung', 'bay_oz', '04292010053301chendy@reg-buntung.com', '44695a2c9ce88dd8ba66530666aff998', 0, '0000-00-00 00:00:00'),
+(30, 'andoryan83', 'aa0c01cb1bdd163482b0b55bc04e5d88', 'ando_skidrow@yahoo.com', 1, 'Ryando', '081519999193', '021', '99084090', 38, 'Jl. Mentas Selatan 3/38\r\nJakarta Selatan', 'kaoji', '04292010054234andoryan83@reg-buntung.com', '648b92b8bb4efd6186c0efa4b6795683', 0, '0000-00-00 00:00:00'),
+(31, 'restya', '5397d715a1434ba48beb23e66e800528', 'restyaramdhani@gmail.com', 2, 'indah restya ramdhani', '08568504874', '', '', 38, 'wisma medokan blok i no.3', 'bay_oz', '04292010055525restya@reg-buntung.com', '4e0b7ab4f3af48a483707f9263e79039', 0, '0000-00-00 00:00:00'),
+(32, 'irfanhelmi', '18ddc79560b7176794823f99f8612d00', 'irfanpolines@gmail.com', 1, 'irfan helmi', '6285740830640', '', '', 25, 'jl. perumda baru 1 no. 87 tembalang semarang 50275', '', '04292010055900irfanhelmi@reg-buntung.com', 'fa61750f05bc8b8b938a9bfaecf7882e', 1, '0000-00-00 00:00:00'),
+(33, 'primananda', 'b3d67e61a576f0e6cd2f89d04b3a79b0', 'dvprimananda15@gmail.com', 1, 'Divo Primananda', '08176436564', '', '', 38, 'jln. gapura no 8 rawabanteng, cibitung', '', '04292010062836primananda@reg-buntung.com', 'da10539b9265e70940d785dc0aa76e9a', 1, '0000-00-00 00:00:00'),
+(34, 'andoguns', 'aa0c01cb1bdd163482b0b55bc04e5d88', 'andoryan83@gmail.com', 1, 'Ryando', '081519999193', '021', '99084090', 36, 'Jl. Mentas Selatan \r\nJakarta Selatan', 'kaoji', '04292010063826andoguns@reg-buntung.com', '7d34deb19567f87660e140e61be6dfd8', 1, '0000-00-00 00:00:00'),
+(35, 'deta312', '26d680d572824bd84cb37af6fbc56a18', 'deta312@yahoo.com', 1, 'Deta Ardian', '08170997990', '021', '99166445', 36, 'Jl. Sahid 52D RT003/01 Pejaten Barat, Pasar Minggu 12510', '', '04292010095508deta312@reg-buntung.com', '592375f1a59a1401fc233565771e27a7', 1, '0000-00-00 00:00:00'),
+(36, 'icha', '5cd2c8c8096827fed6ec86a95773100c', 'loverschacutex@yahoo.co.id', 2, 'israwati', '085241834422', '0401', '123456', 5, 'JL.ANAWAI KOMP.OHEO NO.8 LEPO2', '', '04292010100250icha@reg-buntung.com', '813aa27aa55392cba8388f6502f3ffbb', 0, '0000-00-00 00:00:00'),
+(37, 'fedrik_mu', 'e67a32432a2275429e835b556c000dcc', 'fedrik_mu@yahoo.com', 1, 'federik ginanjar', '08563171767', '', '', 38, 'Jl. Raya Kalitidu - Bojonegoro No. 2A Kec. Kalitidu Kab. Bojonegoro Jawatimur', '', '04292010100343fedrik_mu@reg-buntung.com', 'f1041a3006f17b41984fad851021c1d5', 0, '0000-00-00 00:00:00'),
+(38, 'dhindy', 'c19ec0fe6b77d3442cdd3e3e05dc2002', 'dhindy@gmail.com', 2, 'Hindryani Ratna H', '081328873011', '', '', 36, 'Jl. Sahid 52D RT003/01 Pejaten Barat, Pasar Minggu 12510', 'deta312', '04302010012647dhindy@reg-buntung.com', 'ee369cc89526ffef38b8e81ed05ad85f', 0, '0000-00-00 00:00:00'),
+(40, 'qqqqqq', '96e79218965eb72c92a549dd5a330112', 'mo_poipo@gmail.com', 1, 'Darwin Susanto', '0817242142', '021', '95031303', 36, 'Kemanggisan', 'carinoz', '04302010051900qqqqqq@reg-buntung.com', 'a93c345da7a7c01f46c97f0c676b69fc', 1, '0000-00-00 00:00:00'),
+(41, 'wwwwww', '96e79218965eb72c92a549dd5a330112', 'legalitydars@gmail.com', 1, 'Freddy Lukmina', '0813454875', '', '', 38, '', 'carinoz', '04302010115356wwwwww@reg-buntung.com', '13cde14d8a7e580438bcf4ad53187607', 1, '0000-00-00 00:00:00'),
+(42, 'yuda_i', '0b4e7a0e5fe84ad35fb5f95b9ceeac79', 'yuda_iyu@yahoo.co.id', 1, 'Yuda', '0812587774', '', '', 30, '', 'carinoz', '04282010105052yuday@reg-buntung.com', '42963c2dfa98043072305329feb22d12', 1, '0000-00-00 00:00:00'),
+(43, 'hudo_puck', '3af111f42d178bb8', 'kiko_yutopos@yahoo.com', 1, 'Kiki', '0817524125', '', '', 30, '', 'carinoz', '06222010105052hudo_puck@reg-buntung.com', '74cb773b3e0647c8b280db8b1793678e', 0, '0000-00-00 00:00:00'),
+(44, 'lilo_n_stich', '93177f5bebb5a847e057e7686c9b3bb7', 'kuqy_56890@yahoo.com', 2, 'Kumala', '08136987457', '', '', 30, '', 'carinoz', '06215010105152lilo_n_stich@reg-buntung.com', 'd9c333a594868248c984d84a77e0dc58', 1, '0000-00-00 00:00:00'),
+(45, 'yogastar', '80e6897c2feae8cf654264a3d1365416', 'yoga_a_star@yahoo.com', 1, 'Prayogo Budi Hartono', '085234374111', '', '', 29, 'Perum GGM Blok L No. 7, Klatak, Banyuwangi, Jatim', 'buntung.com', '05012010123636yogastar@reg-buntung.com', '56316970b005b23a8179262cc301e43f', 0, '0000-00-00 00:00:00'),
+(46, 'afrizzal', 'f917c3c181afb4057e556016927bb5ed', 'rizzalsuhaedy@rocketmail.com', 1, 'aprizzal', '085224039252', '', '', 38, 'desa.sukahaji blok.kongsi kec.patrol', 'nanagot', '05012010104342afrizzal@reg-buntung.com', 'bb93f60af7663add5359a2a60c8e05ce', 1, '0000-00-00 00:00:00'),
+(47, 'okiko', '887f28fb505abaeb980a4568c7d96f4f', 'kiokoi_76873@yahoo.co.id', 1, 'Yudi Irawan', '0812346908', '', '', 30, '', 'carinoz', '04303118017647okiko@reg-buntung.com', '742c2fd1f138f4dfd677f07129081c65', 1, '0000-00-00 00:00:00'),
+(48, 'aszy', '679256e0ec3063e206fb5255fe66b15a', 'kulup_arridho_kashidasworo@yahoo.co.id', 1, 'Kulup Arridho Kashidasworo', '085691295937', '021', '8700809', 36, 'Jl. Majapahhit Blok T/8 RT 06/17 Pondok Mandala, Tugu, Cimanggis, Depok', 'buntung.com', '05032010020918aszy@reg-buntung.com', 'eec6077e938899a9192de270e6326606', 1, '0000-00-00 00:00:00'),
+(49, 'tomskorea', '57ba23b78c1fd7c8ac4bf325f6f40d9a', 'toms_korea@yahoo.co.id', 1, 'Tommy Dermawan Tanama', '081332570092', '031', '7312540', 29, 'Raya Darmo Permai 1/57, Surabaya Barat', 'aszy', '05032010031325tomskorea@reg-buntung.com', '1e444b5a73722607120c103cc284b77b', 0, '0000-00-00 00:00:00'),
+(50, 'ricky_kia', '6894e45cd6c8b887f52ae3b59d8f15dc', 'ricky_kia22@yahoo.com', 1, 'RIZKIA KRISNAWAN', '085781198111', '0267', '407058', 3, 'JL.CIATER NO 171 RT/RW 04/12 PERUMNAS ADIARSA,KARAWANG', 'aszy', '05032010031457ricky_kia@reg-buntung.com', '9cc1c72035c9878bc2e7f1fb5bc1069d', 0, '0000-00-00 00:00:00'),
+(51, 'n_register', '7026fb27eaa5c0cb47514023a2bd03fa', 'at.ozkula@gmail.com', 1, 'Rozaq Isnaini Nugraha', '085641122414', '024', '6734424', 38, 'Jl. Tambak Boyo No.17e RT06 RW02 Siwalan Gayamsari 50162', 'buntung.com', '05032010033255n_register@reg-buntung.com', '6f060bb4ac4dd7b790f326038bd93cd3', 1, '0000-00-00 00:00:00'),
+(52, 'anjardiff', '064eb07abf74e8e26b81c5f39206b8d1', 'ginanjar.rachmat@gmail.com', 1, 'Rachmat Ginanjar', '08814027701', '', '', 38, 'Kp. Sukaratu RT 01/03 Ds. Kec. Sukaratu Tasikmalaya 46152', 'aszy', '05032010043557anjardiff@reg-buntung.com', '324f24c425451d09b5a3a96a2cf8a164', 1, '0000-00-00 00:00:00'),
+(53, 'aiff', '4df9edb980b5b99c1751fd91b682e821', 'kahyangan@gmail.com', 1, 'saefuloh', '085210030000', '021', '44445696', 36, 'JL. Prof Hamka No. 55 Komplek Sawah Indah Larangan selatan, Larangan Tangerang', 'aszy', '05032010044232aiff@reg-buntung.com', '6b2df187d7ca76700fcf9a403bdc29fb', 0, '0000-00-00 00:00:00'),
+(54, 'gojlagg', '25f9e794323b453885f5181f1b624d0b', 'ocadd.boyz@yahoo.com', 1, 'ocadd', '+6285624289086', '', '', 38, 'Jl. Derwati No.88 Bandung', 'buntung.com', '05032010044649gojlagg@reg-buntung.com', 'fb0027b9cd1edb84cfe20382e1a5e200', 0, '0000-00-00 00:00:00'),
+(55, 'crwlng2000', 'b2689af04ab0bf59e5d06cff3cf2992b', 'surabaya.one@gmail.com', 1, 'yohanes roy', '081331923445', '', '', 29, '', 'aszy', '05032010044723crwlng2000@reg-buntung.com', 'd587f4dbf29e968ad41ace18bfc24072', 1, '0000-00-00 00:00:00'),
+(56, 'thenicekid', 'f75a57fc12770e7e6d3bc3f2c5e6fd41', 'riyan.sapoetra@yahoo.com', 1, 'Riany', '02183616421', '', '', 36, '', 'aszy', '05032010044917thenicekid@reg-buntung.com', '4f1af6803191cd619ab58fef35f88eb5', 0, '0000-00-00 00:00:00'),
+(57, 'media1234', '634f260ea84841cf09d5e0a269a2104a', 'media.utama.sby@gmail.com', 1, 'Barata Andrianto', '03170208200', '', '', 38, '', 'crwlng2000', '05032010050309media1234@reg-buntung.com', '7023542b15fbba25d134f700efdedf9b', 1, '0000-00-00 00:00:00'),
+(58, 'naru', '956d208eecd9ab1b89119f6d6ea727f9', 'naru_pinklovers@yahoo.com', 2, 'Naru Lita', '081321486665', '022', '5413675', 38, 'Jl. Tengah-Flamboyan No.6 Mekarrahayu Margaasih Rt4/Rw24 40218', 'aszy', '05032010053339naru@reg-buntung.com', '88645a8f615f6327988b714bbbea983b', 1, '0000-00-00 00:00:00'),
+(59, 'hauntbee', 'eb6c8251d498496ac82ad98d96cfeccb', 'hauntbee@yahoo.com', 1, 'Honby', '081281998998', '021', '5551661', 36, 'Toram 14 no. 41.', 'buntung.com', '05032010055023hauntbee@reg-buntung.com', '6f0b22680c3e6ebaa1c8a895c41d8f29', 1, '0000-00-00 00:00:00'),
+(60, 'meirinanis', 'd159a6b857007f323f6e42fbcd25857d', 'merry4fellow@yahoo.com', 2, 'Meirina Soerya P.', '08971543243', '0411', '869311', 38, 'BTN MINASA UPA BLOK A 10 NO. 9 \r\nMAKASSAR 90221', 'aszy', '05032010055909meirinanis@reg-buntung.com', '23fc183ad2511813eef7caccaefd74fd', 0, '0000-00-00 00:00:00'),
+(61, 'leos', '80862e93ad14e96e638dac5ead4d762f', 'leosurabaya@gmail.com', 1, 'Leo Sukarno', '081337023727', '031', '3723747', 29, 'Sidomulyo 4B No. 2 Surabaya 60128', 'buntung.com', '05032010062244leos@reg-buntung.com', 'b14cb1efb1a2e397830b919406c85f40', 1, '0000-00-00 00:00:00'),
+(62, 'bagirang', '06474279fb5225ce481e15396830e297', 'bagirang@gmail.com', 1, 'Mohamad', '08995336033', '', '', 27, 'Jl. Untung Suropati 13, Kedung Lumbu, Pasar Kliwon, Solo 57113', 'aszy', '05032010062333bagirang@reg-buntung.com', 'a8767bfe8128acac94faa0a776752946', 1, '0000-00-00 00:00:00'),
+(63, 'shelviana', '00c5862633d60a8a7bafbf277d46f3c2', 'shelviana_ch@yahoo.com', 2, 'Shelviana', '087878072291', '021', '88865808', 37, 'Harapan Indah', 'buntung.com', '05032010063547shelviana@reg-buntung.com', 'd0d03ca137a54e0097d47f54dd35d0a8', 0, '0000-00-00 00:00:00'),
+(64, 'andersent', '841c22386bcb053ebde2909510db487e', 'andersen_tjoeng@hotmail.com', 1, 'andersen', '08176555863', '021', '6682934', 36, 'pluit timur', 'aszy', '05032010065838andersent@reg-buntung.com', 'fce80ebc71e8ecd6afa153dfc067e762', 0, '0000-00-00 00:00:00'),
+(65, 'cookies17', '4fd1f014d8cc1d1fd09df2b01b8bce66', 'nathania_ganda@yahoo.co.id', 2, 'Nathania', '6281311472755', '021', '8225246', 37, 'Kemang Pratama 3 Jalan Aralia Blok H2/5', 'buntung.com', '05032010082526cookies17@reg-buntung.com', '942a92939aedb4b697284ad5cc921645', 1, '0000-00-00 00:00:00'),
+(66, 'tomi', 'd043c14f21a2a5dfeadd76761643bb3d', 'tom_blenkykan@yahoo.co.id', 1, 'tomi', '085647607090', '', '', 38, '', 'aszy', '05032010083907tomi@reg-buntung.com', '8922d8f795257738eb7a5f90c88987bc', 0, '0000-00-00 00:00:00'),
+(67, 'dicky boy', 'c92541d29b8ff15b35dc63601e95bb3b', 'dickyherya@yahoo.co.id', 1, 'dicky', '08988802450', '', '', 37, 'komp sbs blok b8 no 32, bekasi utara 17124', 'aszy', '05032010090235dicky boy@reg-buntung.com', 'aeba1aa4c79278112312e0e24a8966ab', 1, '0000-00-00 00:00:00'),
+(68, 'johnretep', '2971d2aa9f56fc38ec30016d20f5df49', 'thephiladelphians@yahoo.com', 1, 'john', '08170473723', '', '', 27, '', 'aszy', '05032010090248johnretep@reg-buntung.com', '0e93cd8dc7ba156c8741598a6a94bca2', 0, '0000-00-00 00:00:00'),
+(69, 'ariksaja', '31940f9d7e41e8c2d096e5b2d74971a1', 'equilibrium.factor@gmail.com', 1, 'fakhry hasan', '+628563537675', '0347', '801016', 10, '', 'buntung.com', '05032010090854ariksaja@reg-buntung.com', 'd9b9adcfd86c6d0a83cfbf0cc05887da', 1, '0000-00-00 00:00:00'),
+(70, 'adiedcool', 'd096c61195a33bb4d73afe508ac71207', 'adiedcool@yahoo.co.id', 1, 'Aditya Perdana', '081931532471', '031', '8430721', 29, 'Kutisari Indah Barat 1/99\r\n60291', 'aszy', '05032010101927adiedcool@reg-buntung.com', 'cc7f66c4d2250e25c9cde116bdcb3b74', 1, '0000-00-00 00:00:00'),
+(71, 'validator', 'e10adc3949ba59abbe56e057f20f883e', 'truevalidator@gmail.com', 1, 'Steven', '02198760988', '', '', 36, 'Jl. Tanjung Duren Raya No 89', 'aszy', '05032010110105validator@reg-buntung.com', '980eee9f6b4e62d8d011a32e21d59b25', 0, '0000-00-00 00:00:00'),
+(72, 'henz', 'aeee49efcaf6f6f3417bbc920f8a2579', 'white_henz@hotmail.com', 1, 'hendri wahyudi', '08988327585', '0251', '383453', 36, 'jl. padjajaran indah V no.20 Bogor', 'buntung.com', '05032010112907henz@reg-buntung.com', '8fdd99b145e48405f79f6b614f425580', 0, '0000-00-00 00:00:00'),
+(73, 'sysys', '964fc8db291e9e1c541ab41754f96f9f', 'sysys.loading@gmail.com', 1, 'sysys isman r', '085691929518', '021', '7426738', 30, 'bukit pamulang indah bloek e 10 no 2.pamulang, tangerang', 'aszy', '05042010020619sysys@reg-buntung.com', 'ab94f811aaae7fdf1bb58a7d61864d0e', 1, '0000-00-00 00:00:00'),
+(74, 'asoka87', '5fb74d3a4f6c83f1a658000ff2554d46', 'medan_kui87@yahoo.com', 1, 'susanto', '08174988811', '021', '92690666', 36, 'kebun jeruk', 'aszy', '05042010033932asoka87@reg-buntung.com', '4f54467611862790da87f5741610074b', 1, '0000-00-00 00:00:00'),
+(75, 'denzkaconk', '5f9fa5fca2a44fe5690a9bbfcc867a89', 'dr_yogi07@yahoo.co.id', 1, 'Deny Rachman YP', '08170063390', '', '', 5, 'Jl. Diponegoro No. 35, Kendari, Sulawesi Tenggara', 'aszy', '05042010081405denzkaconk@reg-buntung.com', '261629824d53db712f21fd7b537c0619', 1, '0000-00-00 00:00:00'),
+(76, 'juju', 'd3d3f76ccd4fd75fb0b1920b3e7d2b43', 'ryoset@yahoo.co.id', 1, 'jurio s', '085959700212', '', '', 30, 'jl intan 2 blok w no 17', 'buntung.com', '05042010082126juju@reg-buntung.com', '49440e941c29fd6ccfd8d008066f2698', 0, '0000-00-00 00:00:00'),
+(77, 'bayindut', 'e977281fff360260c466c7a9aa1bb461', 'aliem_ndut@yahoo.com', 1, 'Okta Noor Patria', '085221212030', '', '', 36, 'Jl Ex - Auri no 29 B\r\nrt 002 rw 003, kuningan \r\nJakarta Selatan', 'aszy', '05042010083715bayindut@reg-buntung.com', 'a45d36be90c923d1ee2ae14bb3788d5e', 0, '0000-00-00 00:00:00'),
+(78, 'linolin', 'e4c2923da98f735ff743d2689129235a', 'linolin@rocketmail.com', 2, 'sekar yulin', '085721583967', '', '', 38, 'jl. rebana 17 rt 03 rw 03 turangga', 'buntung.com', '05042010085945linolin@reg-buntung.com', '2b3ffe448fd0649615c87d8ae319b60d', 0, '0000-00-00 00:00:00'),
+(79, 'angger_bas', 'a1ea383adef573ef6c71b29d5a256d37', 'angger_bas@yahoo.com', 1, 'ANGGER BASKORO', '08563100112', '', '', 10, 'watu mujur 1/20a', 'aszy', '05042010090221angger_bas@reg-buntung.com', 'af6daf16f89f66caa15e95c3a8b33003', 0, '0000-00-00 00:00:00'),
+(80, 'sandimulya', 'ac17fbdf87bad55c1f3e81168bd00abc', 'sandi.mulya@yahoo.com', 1, 'sandi mulya', '08815128261', '', '', 36, 'jalan sunyaragi no1 kel.sunyaragi kec.kesambi 45132 kota cirebon', 'aszy', '05042010092113sandimulya@reg-buntung.com', '4968439f2e5648586c1233a994dffd9a', 0, '0000-00-00 00:00:00'),
+(81, 'ivand', 'e6b13b1034d542ebddcb562e20091a1f', 'adilyanugrah@yahoo.com', 1, 'ivan', '087821228922', '', '', 38, '', 'aszy', '05042010094311ivand@reg-buntung.com', '29e9d5fdb1591848c31dd5353ee8e5ec', 0, '0000-00-00 00:00:00'),
+(82, 'obiecorp', '03cdeac5d4298be70c135188771110e2', 'mr_obie_2008@yahoo.com', 1, 'Dilla Arnanda Hutapea', '081397394001', '', '', 13, 'Jl.W.R.Supratman No.06 tanjungbalai ASAHAN SUMUT. 21315', 'aszy', '05042010103209obiecorp@reg-buntung.com', '77d4ac7c7e2c8d5beee81a10c34374e4', 1, '0000-00-00 00:00:00'),
+(83, 'ichaelmago', '379e4b5f3f752eb2782d3a773aa296bb', 'ichaelmago@live.com', 2, 'Yunisa Hidayanti', '085692740091', '', '', 36, '', 'aszy', '05042010013155ichaelmago@reg-buntung.com', 'ac1c0f186f6c4c1345ab866327c83f33', 1, '0000-00-00 00:00:00'),
+(84, 'diazka', 'daaca03d6db28547ef318f9b40f48571', 'bon_kla@yahoo.com', 1, 'Hendy Afriadi', '081222988328', '', '', 2, 'Perum Sukamenak Indah Blok A-21 RT. 01/08 Kel. Sukaaasih Kec. Purbaratu Kota Tasikmalaya', 'buntung.com', '05042010020933diazka@reg-buntung.com', '7159b9ad1f2c52b7f568a21bfe15961c', 1, '0000-00-00 00:00:00'),
+(85, 'edogawa', 'e74fecb5e8e19bc11a3547a15981f869', 'sheva22th@yahoo.com', 1, 'edo yudhistira', '93288548', '', '', 36, '', 'buntung.com', '05042010023029edogawa@reg-buntung.com', '783a0a2208f51bc066a6ea13c61da427', 1, '0000-00-00 00:00:00'),
+(86, 'id010', 'b9185c23cf9d1c61691727819e87b7d6', 'h4rry.crs@gmail.com', 1, 'Harry S', '085721552340', '', '', 38, 'Komp. Margahayu Raya C 3 No. 127B,\r\nBdg 40286', 'buntung.com', '05042010030549id010@reg-buntung.com', '1bf6f9a6de56a2d9e2d1cad97b6c887e', 1, '0000-00-00 00:00:00'),
+(87, 'yogims', '5621be1f2352574f7a48ba5596a7c69d', 'yastanto@gmail.com', 1, 'yogi astanto', '02197328083', '021', '7325565', 30, 'Jl.Japos Raya / Sunan Gunung Jati No.34 Rt.03/08 ,Peninggilan,Ciledug,Tangerang 15153, Banten', 'aszy', '05042010033626yogims@reg-buntung.com', 'af8cd4b1bac48f15823f525ae2a5be90', 1, '0000-00-00 00:00:00'),
+(88, 'arky', 'ac43724f16e9241d990427ab7c8f4228', 'azati.arky@gmail.com', 1, 'arky', '08561605713', '', '', 38, 'Jl.Babakan Ciamis NO.20 RT/RW 01/01 \r\nSukapura\r\nKabupaten Bandung, Jawa Barat\r\n40267', 'aszy', '05042010041923arky@reg-buntung.com', '736898d2df3805ca4ab943e41046ed7f', 1, '0000-00-00 00:00:00'),
+(89, 'degintings', 'f63f4fbc9f8c85d409f2f59f2b9e12d5', 'degintings@gmail.com', 1, 'andreas ginting', '081805539574', '0361', '8479925', 29, 'jalan nuansa timur VI/2 nuansa kori-taman griya jimbaran', 'aszy', '05042010042341degintings@reg-buntung.com', 'ab9d643a136012d1f7f26fdfac0f9c15', 1, '0000-00-00 00:00:00'),
+(90, 'rianta', '054b2322e91a30c2bd448d5aaa2440b8', 'rianta82@yahoo.com', 1, 'rianta', '+6285868560417', '', '', 38, 'sanan bawuran plere bantul yogyakarta 55791', 'id010', '05042010051639rianta@reg-buntung.com', 'f5824aee812198801369e977b331f49a', 0, '0000-00-00 00:00:00'),
+(91, 'shp_cac', '673280bcf56c4b058612050c83030e38', 'shp_cac@yahoo.co.id', 1, 'herry purwantho', '08172857516', '', '', 25, 'kupang tanjung sari rt.05/11 no.14\r\nambarawa, kab. semarang', 'buntung.com', '05042010054044shp_cac@reg-buntung.com', 'fefddf76ec1456cc2eb371e3a0ce89d5', 1, '0000-00-00 00:00:00'),
+(92, 'keil', '1ed5642984882176625571621c1d19a0', 'frommoz@rocketmail.com', 1, 'Ziyan Zharfan', '081395242260', '022', '75378', 38, 'Jl. Ciwastra Komp. Griya Bandung Indah C.16 No:11 RT/RW 007 Kec. Bojongsoang Kab. Bandung 40287', 'aszy', '05042010054433keil@reg-buntung.com', '8194b53bb73a4512e36b421393671cee', 1, '0000-00-00 00:00:00'),
+(93, 'krisze', '88eec9f492e281c2f92fff2c1b5b0d4a', 'kris_ze@yahoo.com', 1, 'krismanto', '02191338886', '', '', 38, 'melati 7/14 jatisampurna bekasi', 'aszy', '05042010055628krisze@reg-buntung.com', '7e76e352260f98599f3f22d86344e332', 1, '0000-00-00 00:00:00'),
+(94, 'atikahlbs', '51e0a46ceb9b9f53a96281bd6b4f38e8', 'atikahlubis@live.com', 2, 'atikah lubis', '085780632272', '0254', '210703', 38, 'taman lopang indah blok D 14 no 7 serang-banten', 'keil', '05042010061150atikahlbs@reg-buntung.com', '99055b7755bbf721d82c595eba17fbe2', 1, '0000-00-00 00:00:00'),
+(95, 'xenos123', '51202877e2449a6e657e1284bf47a641', 'beauhtika@yahoo.com', 1, 'PURNAMA', '087880370120', '', '', 36, '', 'aszy', '05042010061445xenos123@reg-buntung.com', '2d98994e333fb78263f317143d83eb64', 1, '0000-00-00 00:00:00'),
+(96, 'ninja250', '09ab706879c0942c1fb6504d117eaa77', 'sandy_cerdaz@yahoo.co.id', 1, 'stev', '08179998182', '021', '54545616', 36, '', 'keil', '05042010061933ninja250@reg-buntung.com', 'a831f881f69a3c9a565b7ecc5d6e330d', 0, '0000-00-00 00:00:00'),
+(97, 'radindra', 'c72ae53af7b993ad88d4ae9803634fe9', 'anakjalanan95@hotmail.com', 1, 'fadia riandra putra', '085722152000', '0266', '226942', 38, '', 'buntung.com', '05042010062130radindra@reg-buntung.com', 'bc8e1b52196f3b99a11d1541dee551bb', 1, '0000-00-00 00:00:00'),
+(98, 'ninja250r', '09ab706879c0942c1fb6504d117eaa77', 'shandyandreanuz@live.com', 1, 'sandy', '08179998182', '021', '54555029', 38, 'jakarta barat cengkareng(kosambi baru)', 'keil', '05042010062340ninja250r@reg-buntung.com', 'ff6aefcd02714842037856fa5f65e0ab', 1, '0000-00-00 00:00:00'),
+(99, 'h3nsky', '44eb77ea691e7ac68f9b0134f9d347e4', 'h3nsky@gmail.com', 1, 'heno', '0852633333333', '', '', 38, '', 'keil', '05042010062815h3nsky@reg-buntung.com', '67ec332bcfbe3451401ef890603098e8', 0, '0000-00-00 00:00:00'),
+(100, 'awan', '9ae32b27302be79001e4b85355a1eaa8', 'awangraphic@yahoo.co.id', 1, 'Agung Iwan Indriawan', '91291368', '021', '91291368', 38, 'RT.009 RW.05 NO.21\r\nSLIPI, PALMERAH\r\nJAKARTA BARAT 11410', 'keil', '05042010063014awan@reg-buntung.com', '68d14855f83af56bb7d9bf610c2cd619', 1, '0000-00-00 00:00:00'),
+(101, 'ardy', '27dbf3f0a07de5582ecf79979b9e299c', 'yudha.ardj@gmail.com', 1, 'ardy', '085762892568', '', '', 38, 'jatinangor, sumedang', 'keil', '05042010063221ardy@reg-buntung.com', '578fbb371368aa43da35f0ae77707854', 0, '0000-00-00 00:00:00'),
+(102, 'encen', '4ecd1b7de7a66484414ea3f12154327d', 'gswahyu4@gmail.com', 1, 'encen', '02198581702', '', '', 37, 'bekasi', 'buntung.com', '05042010063625encen@reg-buntung.com', '547dbfcbbe4e9d1ebb09bd7c689513e7', 1, '0000-00-00 00:00:00'),
+(103, 'silintuh', 'b80a1f7c84892cf068758b8fdc578c35', 'silintuh@gmail.com', 1, 'Endi Hendiana', '02199696761', '', '', 36, 'Jl. Mahmud Ujung No. 21 RT. 04/04\r\nDuren Tiga Pancoran, Jakarta Selatan', 'buntung.com', '05042010063928silintuh@reg-buntung.com', '8d1d1a5f155987ffc806f5561a8e2258', 0, '0000-00-00 00:00:00'),
+(104, 'haryozero', '83b4ef5ae4bb360c96628aecda974200', 'nerox_neroz@yahoo.com', 1, 'Haryo Narendra Putra', '085717409625', '021', '7352913', 30, 'Jl Dahlia 1 no 14 Blok A 23 komplek Pondok Jurang Mangu Indah,pondok aren,bintaro', 'keil', '05042010064322haryozero@reg-buntung.com', '4f51f56d2ff7ca4cad9c89aa1062084e', 1, '0000-00-00 00:00:00'),
+(105, 'killua', '6a4d9fad1a12468d8a5328da1fcc41a3', 'epujiyanto5@gmail.com', 1, 'eko pujiyanto', '081398312368', '', '', 38, 'jl. pangandaran 1 no.2 perum preumnas suradita, cisauk, tangerang. 15343', 'keil', '05042010064430killua@reg-buntung.com', 'b25a59cc87fbcb942f6caede481adb11', 0, '0000-00-00 00:00:00'),
+(106, 'keilz', 'e10adc3949ba59abbe56e057f20f883e', 'from.ninggar@gmail.com', 1, 'ziyan zharfan', '081395242260', '', '', 38, 'ciwastra', 'buntung.com', '05042010064606keilz@reg-buntung.com', 'abbaf78cc7fd3bd5814b5bb334218a00', 0, '0000-00-00 00:00:00'),
+(107, 'dodol', '876c74d2958edd5a7f3da886bfc10831', 'dodol@dodol.com', 1, 'dodol', '123456789', '022', '112342233', 38, 'hSGRdgfbhdthtrtd', 'keil', '05042010070314dodol@reg-buntung.com', '1e28291c3a04a09959feb5be0335edab', 0, '0000-00-00 00:00:00'),
+(108, 'agusto', 'a356f4698662a51c9675d81e250ba843', 'agusxetyono@yahoo.com', 1, 'agus setyono', '03172822569', '031', '5935882', 29, 'kertajaya 15 buntu 14', 'id010', '05042010073926agusto@reg-buntung.com', 'ce36225826091ca571bc7cfe178d7fb6', 1, '0000-00-00 00:00:00'),
+(109, 'mahatsar', '56017682ebceffb3608afae32dc91300', 'zaragosa_sar@yahoo.com', 1, 'mahatsar hisyam', '085642530202', '', '', 36, 'jalan mampang prapatan 5, rt.06/06,no.12, tegal parang, mampang prapatan, jaksel 12790', 'aszy', '05042010074721mahatsar@reg-buntung.com', '41ea6d7df4aea9e6049512a1acf7615e', 1, '0000-00-00 00:00:00'),
+(110, 'lily151086', 'f92f9c1b35021c221e67a361fa4f2725', 'lily_151086@yahoo.com', 2, 'lily', '081908437366', '021', '98806673', 36, 'city resort residence komplek malibu b3', 'buntung.com', '05042010075235lily151086@reg-buntung.com', '57d4c6c60cb30e37178e2e2089b9368f', 1, '0000-00-00 00:00:00'),
+(111, 'hkmhcullen', '35ac6dbc37c81427c0a0054f2eaeabb2', 'hkmhcullen@hotmail.com', 2, 'hikmah hasanah', '08979217527', '021', '7319222', 30, 'jalan hidup baru  V blok A49B no 11 RT:008/01 Komplek Kunciran 15145', 'yogims', '05042010075751hkmhcullen@reg-buntung.com', '22b0dd1505ebb2859060064d8fb9e6a8', 1, '0000-00-00 00:00:00'),
+(112, 'dayatsmart', '82fc6aec1fb9cd3494c3401db5e6f1ba', 'onepiece13th@yahoo.com', 1, 'dayat', '95291515', '021', '6515362', 36, 'sunter jaya jakarta', 'buntung.com', '05042010082557dayatsmart@reg-buntung.com', '8eb1d6b32839200441bbd24b1357b079', 1, '0000-00-00 00:00:00'),
+(113, 'john', '3bf1114a986ba87ed28fc1b5884fc2f8', 'bloodindiamond@yahoo.com', 1, 'GIN', '081272137760', '', '', 38, '', 'keil', '05042010085741john@reg-buntung.com', '2e13d4e6d10314df7bfffd5cfeb59d99', 0, '0000-00-00 00:00:00'),
+(114, 'yudodbs', 'd62c5eefbeddc7eb2cebbb2a6a3087a5', 'bluhertz@gmail.com', 1, 'YUDO DRAJAT BASKORO', '08383505044', '', '', 10, 'Jl. Rangkasbitung No. 2. Malang. Jatim. 65113', 'keil', '05042010094424yudodbs@reg-buntung.com', '330d031a9db0076fbb49580079c1d5b7', 1, '0000-00-00 00:00:00'),
+(115, 'muyasa', '06b274358b94badedfaa207773930146', 'yasir.psi@gmail.com', 1, 'Yasir', '081333454141', '', '', 37, 'JL. Alexander No D-265 Jakasampurna\r\nBekasi barat (Bekasi)\r\nJawa barat', 'buntung.com', '05052010011412muyasa@reg-buntung.com', '61e14845abfb5ba15ed2fbe7567380b5', 1, '0000-00-00 00:00:00'),
+(116, 'ephiii', 'feed5d47c860f422712ac902a89865db', 'evikusumanurannisa@yahoo.com', 2, 'Evi Kusuma Nur Annisa', '081575400075', '', '', 38, 'Jalan Sukabirus D-14 Citeureup Dayeuhkolot Bandung', 'keil', '05052010075527ephiii@reg-buntung.com', '29082b1cc65218f43e3ad8693d278552', 0, '0000-00-00 00:00:00'),
+(117, 'evikusuma', 'feed5d47c860f422712ac902a89865db', 'evikusumanurannisa@gmail.com', 2, 'Evi Kusuma Nur Annisa', '081575400075', '', '', 38, 'Jalan Sukabirus D-14 Citeureup Dayehkolot Bandung', 'buntung.com', '05052010081926evikusuma@reg-buntung.com', '2cc82d3ddb35bb754947a30bf58283b1', 0, '0000-00-00 00:00:00'),
+(118, 'dymster', '36bd5cc3b3f90b7aa1256dd5a5486cb8', 'dymvsmocca@yahoo.co.id', 1, 'Mohan', '02194408765', '', '', 38, 'jakarta', 'aszy', '05052010085112dymster@reg-buntung.com', '6c0b2b2ee46582665011c9f696ff991f', 0, '0000-00-00 00:00:00'),
+(119, 'arif', 'b5c327cf13a104b6837eff3020b0c55f', 'arifirdausi@yahoo.com', 1, 'arif firdausi', '08788-771945', '024', '7608242', 25, 'jl. watugunung raya no 61', 'aszy', '05052010094634arif@reg-buntung.com', 'cad7bc900c8eda636817dce1bfe9c81e', 0, '0000-00-00 00:00:00'),
+(120, 'wantong', '7aed8e1eba5fdafb5467ad508ea88615', 'wa1_haruka@yahoo.co.id', 1, 'wawan kurniawan', '085719079858', '', '', 37, 'kp.pondok soga Rt 005/03 desa Pantai Hurip kec babelan', 'aszy', '05052010100648wantong@reg-buntung.com', '15fb04dd830729d96a34e349977ce94a', 0, '0000-00-00 00:00:00'),
+(121, 'cryson', '29178577ab2ebe13679d5285cca64a66', 'adi_pramono@hotmail.com', 1, 'Adi Pramono', '081336662299', '0335', '422734', 23, 'Gatot Subroto 34', 'aszy', '05052010104957cryson@reg-buntung.com', '036d1bda9af12fa320c46fbf2c78455d', 1, '0000-00-00 00:00:00'),
+(122, 'andriyan', '4c676ceef04aa07f1654952a2285a683', 'andriyanto.tan@akr.co.id', 1, 'andri', '081927258508', '', '', 38, '', 'aszy', '05052010115524andriyan@reg-buntung.com', '74fb2c9c14b38cb4d4317a57b3ca2d74', 1, '0000-00-00 00:00:00'),
+(123, 'syaiful', '0fdb3883b7e78583e203b6822d57f706', 'ipuldonk@yahoo.com', 1, 'syaiful', '085780949445', '021', '8484762', 37, 'jl jatibening raya blok A no 5 bekasi', 'aszy', '05052010120333syaiful@reg-buntung.com', '2ba051e571d9082ebe068e3c064ebc8f', 1, '0000-00-00 00:00:00'),
+(124, 'dietsma', 'dc502eff4e2efeaecb6566348dfb630b', 'dietsma@yahoo.co.id', 1, 'Desmasakti Satriyo Jati', '085640835534', '', '', 38, 'Jl.Koln Ahmad Syam gg H.Nena no 8, Jatinangor', 'buntung.com', '05052010124644dietsma@reg-buntung.com', 'bf403b696ec34de17918c0545b5e47fc', 0, '0000-00-00 00:00:00'),
+(125, 't4k3shi', '0687f52e28851ebbb51575fba811505e', 'hendra_suparto@hotmail.com', 1, 'Hendra', '02191134902', '021', '6412179', 36, 'Jl Ampera Besar no 23 Rt 003 RW 04 Jakarta', 'aszy', '05052010010744t4k3shi@reg-buntung.com', 'ebbd5e343a5521477d746aa8ee091ac3', 1, '0000-00-00 00:00:00'),
+(126, 'terry', '19b14f621d689ccaa28d445e9246c26c', 'terry_darmawanti@yahoo.com', 2, 'terry', '085810105269', '', '', 38, 'kp. sukajadi kel. jelekong kab. bandung', 'buntung.com', '05052010023116terry@reg-buntung.com', 'acf1264c2e7094a9e60850e261374c16', 1, '0000-00-00 00:00:00'),
+(127, 'jsusanto', '5fa3d2ddbb33e365f0e238f25847c682', 'jokosusanto80@gmail.com', 1, 'Joko Susanto', '085684993048', '', '', 38, '', 'buntung.com', '05052010024304jsusanto@reg-buntung.com', '039f5a2744ae47dee02a99cb1224b22b', 1, '0000-00-00 00:00:00'),
+(128, 'starbook', '5c4a926c393dc74de29b7431238f44af', 'danieldamaskus@yahoo.com', 1, 'Daniel Damaskus', '085638592049', '', '', 38, '', 'jsusanto', '05052010025811starbook@reg-buntung.com', '4bc94f65df4d9f8b9c0db6477cf97e75', 0, '0000-00-00 00:00:00'),
+(129, 'aguz_a7x', '091298de65de05b4e25270b0e5a958b3', 'aguz_a7x@yahoo.co.id', 1, 'Agusalim Juhari', '081355428007', '0411', '446211', 9, 'Jl. Barawaja II Lr. Angsa No. 1', 'keil', '05052010030311aguz_a7x@reg-buntung.com', '4ef6b63dbb00f4b03d25fd5ae6bb0f6a', 0, '0000-00-00 00:00:00'),
+(130, 'jemy99', 'cb43e3dcf420ff77d1870b6716689789', 'jemy99@gmail.com', 1, 'Jemy Arieswanto', '085710109695', '021', '8757660', 36, 'PT. Toyoda Gosei Safety Systems Indonesia\r\nJl. Raya Jakarta-Bogor Km 47.5\r\nCibinong-Bogor 16912', 'keil', '05052010030450jemy99@reg-buntung.com', '0e4af39890d1d7f3557c3874e5a36688', 0, '0000-00-00 00:00:00'),
+(131, 'puyopuyo', '114755661ec6b4bd183fbc7010406b05', 'first_generation_09@hotmail.com', 1, 'gandy', '97036471', '021', '00000000', 36, 'Komplek Taman Harapan Indah Blok EE NO 7 Jak barat', 'keil', '05052010030734puyopuyo@reg-buntung.com', '3a7d93500d17e6fdf418893525210c4b', 1, '0000-00-00 00:00:00'),
+(132, 'nandha', '294651def103bbba3cabe84c66dd05f5', 'mas_nandha@live.com', 1, 'arnanda wahyu maulana', '08975926717', '0287', '661049', 25, 'Rt 03 Rw 06 kutowinangun, kecamatan kutowinangun, kabupaten kebumen, jawa tengah 54393', 'buntung.com', '05052010033824nandha@reg-buntung.com', 'd744f3839568e5711921c54cb78826f4', 0, '0000-00-00 00:00:00'),
+(133, 'dj_idoey', '9d6c64439586bfd827deb5baefedbee6', 'idduy_chalky@yahoo.com', 1, 'yudhi handreiyana w', '08179880008', '022', '7200771', 38, 'Jl. Samarinda No. 38', 'aszy', '05052010034456dj_idoey@reg-buntung.com', '52eaed36794770264d53013ab18f32bb', 0, '0000-00-00 00:00:00'),
+(134, 'muhkito', '4edfc924721abb774d5447bade86ea5d', 'muhkito@yahoo.com', 1, 'Muhkito Afiff', '081392242280', '', '', 24, 'Jl H Suwandi Blok A RT 22 no 8\r\nSamarinda 75123', 'aszy', '05052010035835muhkito@reg-buntung.com', '35305f9c666d852ce48b48564cca5d05', 1, '0000-00-00 00:00:00'),
+(135, 'chasanova', 'c9cad0db9b0d5fc89a382f9f742c2b28', 'indocityplus@gmail.com', 1, 'Andrianto Radmawan', '085888842111', '0751', '71871', 15, 'JL. Baru Indarung 48', 'buntung.com', '05052010065924chasanova@reg-buntung.com', 'da2f74ff50c55536546891da0ef2fbf0', 1, '0000-00-00 00:00:00'),
+(136, 'ryanzz1991', '7f9ba119d6a5a4fb886703257fbe4c1b', 'avis_anf@yahoo.co.id', 1, 'avis noor fahriyan', '085793405979', '', '', 38, 'SERVICE CENTER POLYTRON\r\njl. perintis kemerdekaan no 34a\r\nTASIKMALAYA', 'buntung.com', '05052010074257ryanzz1991@reg-buntung.com', 'e6fcb0ed9783438037882d601b16fa88', 0, '0000-00-00 00:00:00'),
+(137, 'sorachanz', '55f55cb70c1c9e9f841992337c0a2a16', 'sorachanz@yahoo.com', 1, 'Didi', '08992365192', '0711', '314196', 17, 'Jln.pangeran antasari lorong terusan jaya no.251', 'buntung.com', '05052010080628sorachanz@reg-buntung.com', '8bcffe76a680fb82b1f56655b5bba7d2', 1, '0000-00-00 00:00:00'),
+(138, 'mingz', '55f55cb70c1c9e9f841992337c0a2a16', 'k.yamato64@yahoo.com', 1, 'Billy', '0899233999', '0711', '352334', 38, 'jln.dempo', 'sorachanz', '05052010081801mingz@reg-buntung.com', '01e13595b49f5988903f8b691bad06ac', 0, '0000-00-00 00:00:00'),
+(139, 'macz888', '72ba0e8fec294213410e6988f3d77fb0', 'prince_x85@yahoo.com', 1, 'Welly Gonarto', '085656000717', '0411', '321327', 9, 'Jl. Sarappo no.108', 'aszy', '05052010083407macz888@reg-buntung.com', '7e3895ae42216577716f5087b1dcff95', 0, '0000-00-00 00:00:00'),
+(140, 'lolll', '1b3231655cebb7a1f783eddf27d254ca', 'superlol@yahoo.co.id', 1, 'anton', '08574212521', '0211', '823252', 36, 'Jln. parangtritis no.32', 'sorachanz', '05052010084646lolll@reg-buntung.com', '779276e9dfde44df13c9341ab8907349', 0, '0000-00-00 00:00:00'),
+(141, 'neonz', '62cd275989e78ee56a81f0265a87562e', 'nenonz@yahoo.co.id', 1, 'Lisa', '08576523512', '0211', '353221', 36, 'Jln.Gajah Mada', 'sorachanz', '05052010084942neonz@reg-buntung.com', '27a30fe8c2748ef1fd7964ca097f7059', 0, '0000-00-00 00:00:00'),
+(142, 'prasdw', '9f5eb3ee60132beda57958b9de9b73b0', 'pras.pras1@gmail.com', 1, 'Dwi prasetyo', '08567093648', '', '', 36, 'jalan kampung baru 3', 'buntung.com', '05052010085532prasdw@reg-buntung.com', 'e5b2dfc1e41d7feed031fa337a5c516b', 0, '0000-00-00 00:00:00'),
+(143, 'in_win23', 'cf1d9b91d9f2d7e5c82118390e290d7d', 'in_win23@yahoo.com', 1, 'indra kurniawan', '081269596938', '', '', 21, 'kompleks baloi persero, blok A, no.8 (depan townhouse) kecamatan lubuk baja, batam.', 'aszy', '05052010091149in_win23@reg-buntung.com', '2b18a09a122fe335aef2e39b20d0fadc', 0, '0000-00-00 00:00:00'),
+(144, 'beerawa', '10bd227db5871be455a82cb74ffa36ec', 'beerawa@rocketmail.com', 1, 'I Nyoman Ega Beerawa', '081933042624', '', '', 29, 'Jl. Baruk Barat 5B/26', 'buntung.com', '05052010091309beerawa@reg-buntung.com', '8f53cddd77a0e72f34a4746f0d77ab04', 1, '0000-00-00 00:00:00'),
+(145, 'erlina', '7e00638186e666eb0e30625e856b5ea5', 'cherriezmine@yahoo.com', 2, 'Erlina', '081930821209', '021', '6397258', 36, 'Jl. Tanah Sereal 6 No.11, Kecamatan Tambora\r\nJakarta Barat', 'keil', '05052010103419erlina@reg-buntung.com', 'b51b106159a1af761ed5697ebdb432c7', 0, '0000-00-00 00:00:00'),
+(146, 'vaio46', '534d3efca19c361f04ca006c4248a2a1', 'albert_4wan@yahoo.com', 1, 'dr albert juniawan', '0817848730', '021', '6329514', 38, 'jl padamulya vi no 47a', 'aszy', '05052010105153vaio46@reg-buntung.com', 'bb41b20b38c21a4857d226b13e9f9136', 0, '0000-00-00 00:00:00'),
+(147, 'edwar', 'c802c151d1d6c118a0c68531cb28bee6', 'edward_senjahari@yahoo.co.id', 1, 'Edward', '081363379688', '0752956', '', 15, 'Jl. Daya Bangun III No. 21 \r\nPayakumbuh Barat \r\nKota Payakumbuh \r\nSumatera Barat', 'yogims', '05062010121944edwar@reg-buntung.com', 'fe46885b56ed19c73f1a8bd14874935b', 1, '0000-00-00 00:00:00'),
+(148, 'hapo5an', 'e5d1c761f1ee2665934ac7e22978c4d8', 'hapo5an@hotmail.com', 1, 'Ferry Adrianto', '081371111715', '0761', '7066264', 21, 'jl.kampar ujung 145A,Pekanbaru 28143', 'buntung.com', '05062010122540hapo5an@reg-buntung.com', '145904eaa9dd95970a2669901b49b5ff', 0, '0000-00-00 00:00:00'),
+(149, 'nekomata', '13382996a946b07f8920f6b4968efc84', 'lose_soulmate@yahoo.com', 1, 'yocky prima nugraha', '083186605522', '0761', '91829', 21, 'JL.LIMA NO.26 KPR1 - PERAWANG\r\nKODE POS 28772', 'keil', '05062010122557nekomata@reg-buntung.com', '85a98794a3442411c21c2be84a8fbe01', 0, '0000-00-00 00:00:00'),
+(150, 'nomaye', '70735ca4d7cf8b394ffac8b509c4e4cb', 'max2steel03@yahoo.com', 1, 'candra', '08159324659', '', '', 36, 'jl.kemanggisan u no 19', 'keil', '05062010123436nomaye@reg-buntung.com', '23434f9d46bb16dd4c3ba3090ed3f82e', 1, '0000-00-00 00:00:00'),
+(151, 'bartjhang', '89c19b7bef07bac627014aaf89af93f4', 'im_melzzz@yahoo.com', 2, 'Melisa', '08989211870', '021', '5529010', 38, 'Modernland', 'buntung.com', '05062010012241bartjhang@reg-buntung.com', 'f50751084b045ad6d93b8df7c5da1854', 1, '0000-00-00 00:00:00'),
+(152, 'asheem', 'a812203a98ab64ba9e399236312dc7db', 'asim_asheem@yahoo.com', 1, 'gianjar', '085624086409', '022', '7503038', 38, 'riung bandung', 'keil', '05062010021025asheem@reg-buntung.com', '565119bd3f85b37f373ac9089a3e6605', 0, '0000-00-00 00:00:00'),
+(153, 'tetekwangi', '4dee4b07c5b2b2fab7d23ec3d775bc92', 'kur2_wij@hotmail.com', 1, 'Kurniawan widjaja', '08985958989', '', '', 25, 'jl. halmahera raya 1A', 'terry', '05062010021415tetekwangi@reg-buntung.com', 'ab8a0c63bc27ae3024f852efd8a00367', 0, '0000-00-00 00:00:00'),
+(154, 'xylonite', '59891fd21163768fa98f7ff92a0e5a78', 'fuma_9888@yahoo.co.id', 1, 'Bagus Pramana', '081389535392', '', '', 36, 'Margonda Recidance', 'buntung.com', '05062010045253xylonite@reg-buntung.com', '4436278f2658ac711524777af79c2124', 1, '0000-00-00 00:00:00'),
+(155, 'irviene', 'b641b20b2c3b2df3ae24d4ac7d1962d1', 'irviene.maretha@gmail.com', 2, 'Irviene Maretha', '085649924594', '', '', 36, 'Jalan Mampang Prapatan XII No. 26 Mampang', 'aszy', '05062010084849irviene@reg-buntung.com', '3eb74c068e61f93a82b9ced35490eee9', 0, '0000-00-00 00:00:00'),
+(156, 'antonovic', 'd97d13dc3be214c73c23e86606daa917', 'vieprast@yahoo.com', 1, 'antonius novie prasetyo', '081931916899', '', '', 25, 'jl. dewi sartika raya 19b rt.03/04\r\nsukorejo, gunungpati,\r\nsemarang 50221', 'aszy', '05062010091817antonovic@reg-buntung.com', 'eb1ddac471ff3ee2b66936d598f529ef', 1, '0000-00-00 00:00:00'),
+(157, 'andridwi05', '5d4b88020e1976c67eab4ff3c95e9533', 'andri_dwi05@yahoo.com', 1, 'Andri Dwi Djayanto', '+628158039553', '021', '8600804', 36, 'Jl Wijaya Kusuma II', 'buntung.com', '05062010094801andridwi05@reg-buntung.com', '1eff54d6411ad574adff8cd82f559df4', 0, '0000-00-00 00:00:00'),
+(158, 'dmaspocil', '68de1566c4f725c1ab2b78f6c1212c63', 'dmaspocil@gmail.com', 1, 'dimas arif', '08999911395', '', '', 37, 'Jl. Setia 1Q no. 18', 'aszy', '05062010095220dmaspocil@reg-buntung.com', 'e7ec3eafdbe319d111ffe449a4f3bc9c', 1, '0000-00-00 00:00:00'),
+(159, 'rudy', '5c6e40b1591dde50e09336a201090cef', 'rudy_sloan@yahoo.com', 1, 'rudy', '0818660260', '021', '64714983', 36, 'Jl sunter agung utara', 'buntung.com', '05062010095629rudy@reg-buntung.com', '194ce675c21bd380ed086b7274ab00f6', 1, '0000-00-00 00:00:00'),
+(160, 'joeydosq70', 'f1e0c21c4b8858bd74a5c0b187e782dd', 'endra@ptsi.co.id', 1, 'endra susanto', '0818406884', '021', '27979777', 36, 'Gd.Adhi Graha Lt.11\r\nJl Jend Gatot Subroto Kav 56 Jakarta selatan 12950', 'terry', '05062010100213joeydosq70@reg-buntung.com', 'e23a13ae53abfbd8395fedab8db9aa52', 1, '0000-00-00 00:00:00'),
+(161, 'arief', '7e66aff9df8b1b3416f3d678e1818a87', 'arief.rh.boy@gmail.com', 1, 'arief', '085715807419', '0000', '00000', 38, 'asr zikon 15', 'terry', '05062010101147arief@reg-buntung.com', 'c0034825141dad04bd025a6f44b97511', 1, '0000-00-00 00:00:00'),
+(162, 'giel', '08388025d79118829a5a409fcb3ca93d', 'gilang_11_9b@yahoo.co.id', 1, 'gilang', '085781663330', '', '', 36, 'jl.mandala v no.49 rt002/02 komp dinas kebersihan, cililitan besar, jakarta timur', 'buntung.com', '05062010101309giel@reg-buntung.com', '779346ea985859a2fc0fbfce4d14269e', 1, '0000-00-00 00:00:00'),
+(163, 'audiwhite', 'c5fe25896e49ddfe996db7508cf00534', 'siregarexaudiwalesa8@gmail.com', 1, 'exaudi', '08999021331', '', '', 36, 'cililitan', 'terry', '05062010102710audiwhite@reg-buntung.com', '001bd0d2be55ce2cfdffd4882a775587', 0, '0000-00-00 00:00:00'),
+(164, 'nur_imam', 'ac43724f16e9241d990427ab7c8f4228', 'nur_imam@ymail.com', 1, 'Nur Imam Hidayah', '085624477500', '0281', '626269', 25, 'Jl. BrigJend Encung no.13 Rt.01/Rw.02 Purwanegara, Purwokerto Utara, Purwokerto, Banyumas, Jawa Tengah\r\n\r\n(Untuk kota tidak ada pilihan Purwokerto jadi saya pilih yang terdekat)', 'keil', '05062010025456nur_imam@reg-buntung.com', 'fda525404d438f34d25d29886189b1a5', 1, '0000-00-00 00:00:00'),
+(165, 'aditzya', '4e05c85ca184bae36ea42bb905206e93', 'biima@ymail.com', 1, 'bima', '089210221629', '', '', 30, 'pondok aren', 'nur_imam', '05062010033908aditzya@reg-buntung.com', '8ca6df0502436480bbd237f81fddad45', 1, '0000-00-00 00:00:00'),
+(166, 'ndhiex', 'd0a37beda4d371e848ee76c8ca15808e', 'ndhici@gmail.com', 1, 'Andhi', '08127564073', '', '', 21, '', 'aszy', '05062010035437ndhiex@reg-buntung.com', '8416125edc1a9de2d3bf8b5ef1753d33', 1, '0000-00-00 00:00:00'),
+(167, 'wildang', '807242a3dba24f7294883ae1f80b9a96', 'wildang67@gmail.com', 1, 'wildang', '081355103814', '0411', '869837', 9, 'Btn minasa upa Blok L14 No.23 Makassar', 'id010', '05062010052018wildang@reg-buntung.com', 'f529a26493beac247a64c21992af174c', 0, '0000-00-00 00:00:00'),
+(168, 'juj_fantacy', '88cb7be03d5f7f06c1800723e4732b18', 'yui_cha_cah22@yahoo.com', 1, 'Ferry Richard', '0812547854', '', '', 30, 'Tanggerang', 'carinoz', '04212010104522juj_fantacy@reg-buntung.com', '4e9a52cb547d7641023045009c5f9069', 1, '0000-00-00 00:00:00'),
+(169, 'muna_ratu', '4b3a3d89bda63d0301d4d5f01e5e8b1e', 'muna_ratu_prin9898@yahoo.co.id', 2, 'Ratu', '0818235475', '', '', 38, 'Bekasi Barat', 'carinoz', '04292013033159muna_ratu@reg-buntung.com', '04292013033159muna_ratu@reg-buntung.com', 1, '0000-00-00 00:00:00'),
+(170, 'donaldrr', '19d285dc816255e3f1a32b6dc7388e90', 'donald.reagen@yahoo.com', 1, 'donald', '085658112113', '0778', '459173', 32, 'sakura garden aa no.3a batu ampar, batam, kepri', 'aszy', '05062010065524donaldrr@reg-buntung.com', '478531263d663578c380c80844bb0014', 0, '0000-00-00 00:00:00'),
+(171, 'fufu1988', '173fe14b88a6106ce554b36e4fdea756', 'death-fashioned@hotmail.com', 1, 'Fanny Hadhyatma', '083890194221', '021', '5535039', 30, 'Jl.nusa indah raya A1/73 Taman Cibodas', 'aszy', '05072010012104fufu1988@reg-buntung.com', 'bab8e1a55939bbbc104384b1c37f204a', 1, '0000-00-00 00:00:00'),
+(172, 'inklusi', '629ab14fab772d78a58eea752bdfc0dc', 'layla.ms08@gmail.com', 2, 'laila maratus soliha', '085711333380', '021', '8578244', 38, 'jalan perumpung sawah rt 14/rw04 no.20b jatinegara jakarta timur', 'keil', '05072010073938inklusi@reg-buntung.com', 'e5726a130e05e057a72f9b9546c625e6', 0, '0000-00-00 00:00:00'),
+(173, 'inklusi2', '629ab14fab772d78a58eea752bdfc0dc', 'putiih@gmail.com', 2, 'laila maratus soliha', '085711333380', '021', '8578244', 36, 'jalan perumpung sawah rt14/rw04 no.20b jatinegara jakarta timur', 'buntung.com', '05072010074358inklusi2@reg-buntung.com', 'e8bb3eb83b0de8f103195f50f10a8ebd', 1, '0000-00-00 00:00:00'),
+(174, 'snytzer', '22e5ab5743ea52caf34abcc02c0f161d', 'v_blackers@yahoo.com', 1, 'budi', '085710146132', '', '', 36, 'jl. cempaka putih barat', 'nur_imam', '05072010083812snytzer@reg-buntung.com', '2edd3a89604630d7f796f7d5dd234a0f', 0, '0000-00-00 00:00:00'),
+(175, 'napster_jr', '0d78658b259edcf59d78044457275aa4', 'matrix_boys99@yahoo.co.id', 1, 'Budianto', '081345150088', '0561', '654329', 22, 'Jln. Jurusan Pontianak no.20 rt01/rw04\r\n"Toko Sentosa Baru" Sungai Pinyuh', 'buntung.com', '05072010014410napster_jr@reg-buntung.com', '2001f4eb5c885c326f0d4d28ce53b58c', 1, '0000-00-00 00:00:00'),
+(176, 'galuh', '566339d4f03ab046fde6ab690766b801', 'galuh.yogaustara@yahoo.com', 1, 'Galuh Yoga Ustara', '085624354682', '021', '85905049', 36, 'jl.bekasi timur 4 no 2 jatinegara 13410', 'aszy', '05072010061051galuh@reg-buntung.com', '7f7031e9aa400d41ce263e9cc8175fb6', 0, '0000-00-00 00:00:00'),
+(177, 'eka1209', 'f4e5eb2c1ec97bd5efe6238191d4c54d', 'eka1209@yahoo.com', 1, 'eka setiawan', '081585353024', '', '', 36, 'jl.sutan syahrir no.1 menteng jakarta pusat', 'buntung.com', '05072010062415eka1209@reg-buntung.com', '752ce89a0d6557e32df28dc48a9f41cf', 0, '0000-00-00 00:00:00');
+INSERT INTO `member` (`id_member`, `username`, `password`, `email`, `gender`, `nama`, `hp`, `kode_area`, `telp`, `id_tujuan`, `alamat`, `referal`, `token`, `page`, `status`, `lastlogin`) VALUES
+(178, 'agung_rx', '01286de8e07e6e4aa33b773f9d89c3bf', 'agung_rx@yahoo.co.id', 1, 'Muhammad Agung Ismail', '085273397999', '', '', 17, 'Jln. Radial Rusun Blok 31 Lt.1 No.12 Palembang', 'aszy', '05072010062955agung_rx@reg-buntung.com', 'c5f4ef56ab11ddd84cb8a12d6b547f5d', 0, '0000-00-00 00:00:00'),
+(179, 'ferdiblfs', '8e850940d9c463246caa82be285f2db1', 'ferdi.balfas@gmail.com', 1, 'ferdiansyah', '0856214754783', '', '', 38, '', 'terry', '05072010070952ferdiblfs@reg-buntung.com', 'd88ebd481cb54c5511ea3edd90f502a0', 1, '0000-00-00 00:00:00'),
+(180, 'ill music', '1ac08a2ce756d2d6ecb12edf7f7a1b5f', 'ismail.rizqy@gmail.com', 1, 'Rizqy ismail', '085793024227', '022', '6641503', 38, 'jln jendral sudirman g-91 cimahi', 'buntung.com', '05072010081626ill music@reg-buntung.com', 'f4c6b02504759031fec2f7f68d03584a', 1, '0000-00-00 00:00:00'),
+(181, 'adrianmbem', '99fc0d962054c032854aabc7906385fc', 'adrianmbem@gmail.com', 1, 'Adrian Sudana Putra Darmawan', '087859716079', '021', '98278085', 36, 'Jl. Jagakarsa 1 No. 10 RT 04 / RW 02\r\nJagakarsa Jakarta Selatan\r\n12620', 'buntung.com', '05072010083648adrianmbem@reg-buntung.com', '218fe5ce52d3605e26a21f92e6fde11d', 1, '0000-00-00 00:00:00'),
+(182, 'raftin21', 'b5e203e1a10a17fc5353e2221cfee327', 'lyminka@yahoo.com', 1, 'Rudy Usmayadi', '081807458574', '022', '7797286', 38, 'Jl. Cempaka VII No. 17\r\nPerum Rancaekek Kencana\r\nBandung 40239', 'aszy', '05072010113240raftin21@reg-buntung.com', '61e0f4ef5e1b3133b37cb53c86eff125', 1, '0000-00-00 00:00:00'),
+(183, 'svali', '340e778621d2b86546ffa4a7c7e47f36', 'ginanjar_ajah@yahoo.com', 1, 'ginanjar', '081322222412', '0251', '87794015', 37, 'Cijantung', 'aszy', '05082010121540svali@reg-buntung.com', '5cf1fc78a6ded2bc0cac6020c0855732', 0, '0000-00-00 00:00:00'),
+(184, 'fakhri2790', 'fce71061f81b6dcbb959504964e35a99', 'fakhri2790@yahoo.com', 1, 'muhammad fakhri', '081349350785', '', '', 38, '', 'aszy', '05082010011429fakhri2790@reg-buntung.com', '51e38c74e55d0a8431fc80ab6039a742', 1, '0000-00-00 00:00:00'),
+(185, 'rio_male', '96bc658ab403adbef4cb095dc7e741bd', 'rio_maleaki@yahoo.com', 1, 'Enggal Swasana', '0811235536', '', '', 38, 'Tongkeng 29', 'raftin21', '05082010021222rio_male@reg-buntung.com', '63842ca268a3e277f9132a4b2e497552', 1, '0000-00-00 00:00:00'),
+(186, 'qwerty89', '5b27b3bbb00366d0581a84447cc029d2', 'beckyy_ndutz@yahoo.com', 1, 'Riky', '085722990399', '022', '92828555', 38, 'Babakan Jeruk III B no. 25', 'keil', '05082010084007qwerty89@reg-buntung.com', 'ad45de22da6e95fa2a9a56dc1301cefb', 1, '0000-00-00 00:00:00'),
+(187, 'derio', '7facbb476f6b70b8791f661bd6a94660', 'rderio@yahoo.com', 1, 'derio rizky aldriandra', '081908711562', '021', '8453691', 36, 'Raffles hills blok I/5 no.21', 'aszy', '05082010094931derio@reg-buntung.com', 'eebf341ccafe9abd35304186113b3d33', 0, '0000-00-00 00:00:00'),
+(188, 'msholy', 'c84baebe0faa2fcdc2f1a4a9f6e2fbfc', 'tessaliaholy@gmail.com', 2, 'Tessa Lia Holy', '081997413377', '0721', '259501', 36, 'Jl. Taman Daan Mogot II No.36 Jakarta 11470', 'buntung.com', '05082010095312msholy@reg-buntung.com', '2dbc22eafc1c30846b0faa087b5368ad', 1, '0000-00-00 00:00:00'),
+(189, 'froogy', '704fd973f1b1388b2e53f7bbef5ab1ea', 'taro.invitro@gmail.com', 1, 'Taruna Riyanto', '081213253940', '', '', 38, 'Perumahan Jatibening Satu Jl. Teratai No.10', 'aszy', '05082010113200froogy@reg-buntung.com', '4ce0cd0ff19f8e2e3153ed77fe0f0f55', 1, '0000-00-00 00:00:00'),
+(190, 'mbil', 'cb648c01b4bd421051e8a455a9940365', 'chaca_chuby@yahoo.co.id', 2, 'Annisa', '081314907873', '', '', 30, 'Komplek Pinang Indah Jl.Hidup Baru 1A', 'froogy', '05082010114406mbil@reg-buntung.com', 'fa2dcc11a275e6b75a3b4eaf361bb805', 1, '0000-00-00 00:00:00'),
+(191, 'patria', '24413e507cf657eb2d1cbd36e9c18222', 'mardi_89618908@yahoo.co.id', 1, 'sumardi', '08127316138', '', '', 38, 'Desa Pondok Meja Perumahan Villa Dahlia Asri No.18 Jl. Jambi Palembang KM.15 Kec. Mestong Muaro Jambi-Jambi', 'raftin21', '05082010121847patria@reg-buntung.com', 'd8cb9cc68df236352485977f9ebc3c15', 0, '0000-00-00 00:00:00'),
+(192, 'adeg', '7cc366f8409d6586f493718e24e08d37', 'kstemba@yahoo.co.id', 1, 'adi rukamto', '08978003850', '', '', 25, 'jl tandang rt 5 rw 10\r\njomblang\r\ncandisari\r\nsemarang\r\n50256', 'aszy', '05082010022905adeg@reg-buntung.com', 'd464a06d6d4a1b2863a03f9097ee8cd6', 0, '0000-00-00 00:00:00'),
+(193, 'inzme', 'f0a6daf1dc05918ffca1966e0c0840c9', 'inz_13@hotmail.com', 1, 'Inwan', '081927805333', '', '', 38, 'jln babakan jeruk 1 no 90 bandung', 'aszy', '05082010034952inzme@reg-buntung.com', '1284ec236e0c4928f94b0cbe1025c8ff', 0, '0000-00-00 00:00:00'),
+(194, 'beelzbub', 'c9425bdabf24dbe23c4a78d4311f46e6', 'kyuubi_han@hotmail.com', 1, 'denny darmawan', '085664008877', '061', '30205333', 38, 'jln.bambu2 no.22a, medan', 'aszy', '05082010035801beelzbub@reg-buntung.com', '83b1318519fd766ab728ed6328524e56', 0, '0000-00-00 00:00:00'),
+(195, 'nadia', 'a2e8cea3392da09d1d31be3fca68efed', 'sunday_chocolate@yahoo.com', 2, 'nadia khairani', '085691264651', '021', '7407449', 30, 'perum.reni jaya blok j6 no.8\r\njln.sumatera 6\r\npamulang-tangerang selatan\r\n15416', 'buntung.com', '05082010050702nadia@reg-buntung.com', 'f72782f3e58ec0d3c476992d276a36fb', 1, '0000-00-00 00:00:00'),
+(196, 'firdaus', 'd076034fc50c31703f08f4053ef01f8a', 'firdha_caem@yahoo.com', 1, 'fatah firdaus', '08179301317', '0328', '662760', 29, 'Jl. Antariksa 20 Sumenep Madura', 'aszy', '05082010050849firdaus@reg-buntung.com', 'ae5e9044ab99cc4b1d15d94fe164aafd', 1, '0000-00-00 00:00:00'),
+(197, 'winson', '1d0dc231f3d9a72e5db2e59dde928231', 'winsonf1b3r@yahoo.com', 1, 'winson', '0852 656 93 818', '', '', 38, 'ciumbluit bandung', 'aszy', '05082010081328winson@reg-buntung.com', 'bd4fdd999c0092a1fbf1f60e16648c4b', 0, '0000-00-00 00:00:00'),
+(198, 'edwinsurya', '0a8e2a4233deac4814def868b44d5f25', 'edwinsuryawijaya@gmail.com', 1, 'Edwin Surya Wijaya', '085741802515', '024', '7471456', 38, 'Jl. Gombel Permai II/339', 'keil', '05092010024845edwinsurya@reg-buntung.com', '412c5202c6a0ad3193318e5e36147cb4', 0, '0000-00-00 00:00:00'),
+(199, 'rani', 'f95f3723670bd3ee6ce8d7745001e678', 'rani_kincy@yahoo.com', 2, 'adia fithrani', '085710777046', '021', '5494196', 36, 'jl.asparagus no.50 rt:05 rw:010\r\nkebon jeruk jakarta barat 11540', 'buntung.com', '05092010122424rani@reg-buntung.com', '8cd51b0c9d493535807a1aa881ce23fc', 1, '0000-00-00 00:00:00'),
+(200, 'rieka_11', '1ca581fb8d7575b5b2b8b43435b94bc7', 'rieka_11@yahoo.com', 2, 'rika kesuma', '085694521453', '021', '95157142', 36, 'jl. kalibata tengan rt.005 rw.03 No.12 A jaksel 12740', 'buntung.com', '05092010014413rieka_11@reg-buntung.com', '61e9ba58eb9f265141c376044f8e69a0', 1, '0000-00-00 00:00:00'),
+(201, 'elizabeth', 'b9334bbe3ea1c8852a22af599f6e6df7', 'elizabeth.mela@yahoo.co.id', 2, 'elizabeth', '085692103787', '', '', 36, 'jl. kebalen 6', 'rieka_11', '05092010020052elizabeth@reg-buntung.com', 'ba14b6b4f1d4bb4f9b450d5622e7b627', 1, '0000-00-00 00:00:00'),
+(202, 'melisa', 'b9334bbe3ea1c8852a22af599f6e6df7', 'melisa.fitri43@yahoo.co.id', 2, 'melisa fitri', '085690809009', '', '', 36, 'menteng', 'rieka_11', '05092010023019melisa@reg-buntung.com', '855b199f57b946f62fe129f00717feaa', 1, '0000-00-00 00:00:00'),
+(203, 'rangga', 'b9334bbe3ea1c8852a22af599f6e6df7', 'ranggarusdan@yahoo.co.id', 1, 'rangga rusdan', '02198787812', '021', '7972121', 36, 'kemang selatan no. 14 C', 'rieka_11', '05092010024948rangga@reg-buntung.com', 'd1d186d53cc15810786f7916012bf8aa', 1, '0000-00-00 00:00:00'),
+(204, 'gerry', 'b9334bbe3ea1c8852a22af599f6e6df7', 'gerry.pahlevi@yahoo.co.id', 1, 'gerry pahlevi', '02195454343', '021', '7992132', 36, '', 'rieka_11', '05092010031327gerry@reg-buntung.com', 'e8b8034d0831a7aa211e49b942dbac58', 1, '0000-00-00 00:00:00'),
+(205, 'fitri', 'b9334bbe3ea1c8852a22af599f6e6df7', 'fitri.ansani@yahoo.co.id', 2, 'fitri ansani', '085697878090', '', '', 36, 'dukuh atas', 'rieka_11', '05092010032415fitri@reg-buntung.com', '12c49858f5d9dab9d9d3b49bae56c2ba', 1, '0000-00-00 00:00:00'),
+(206, 'margaretha', 'b9334bbe3ea1c8852a22af599f6e6df7', 'margarethaviolina@yahoo.co.id', 2, 'margaretha', '081298786760', '021', '7908989', 36, 'jaksel', 'rieka_11', '05092010033357margaretha@reg-buntung.com', 'c4658f22241dfa49f9b4987f4582779c', 0, '0000-00-00 00:00:00'),
+(207, 'akbarfauzi', 'b9334bbe3ea1c8852a22af599f6e6df7', 'akbar.fauzi48@yahoo.co.id', 1, 'akbar fauzi', '081296655789', '021', '7978799', 36, 'jaksel', 'rieka_11', '05092010034302akbarfauzi@reg-buntung.com', '4f577a2a4b25f16a98bd40cd8970db71', 1, '0000-00-00 00:00:00'),
+(208, 'harry_swr', 'b9334bbe3ea1c8852a22af599f6e6df7', 'harrysuwari@yahoo.co.id', 1, 'harry suwari', '08998989890', '021', '8902154', 36, '', 'rieka_11', '05092010035307harry_swr@reg-buntung.com', '46b4d59c53be5f8ee6fd70600a3a2855', 1, '0000-00-00 00:00:00'),
+(209, 'suryo_61', 'b9334bbe3ea1c8852a22af599f6e6df7', 'suryosaputro61@yahoo.co.id', 1, 'suryo saputro', '08787943234', '', '', 36, '', 'rieka_11', '05092010035810suryo_61@reg-buntung.com', '4ce381fdae3352d6f78aa3c5adeff33b', 1, '0000-00-00 00:00:00'),
+(210, 'f_dolly', 'b9334bbe3ea1c8852a22af599f6e6df7', 'febriana.dolly@yahoo.co.id', 2, 'febriana', '081314131414', '', '', 36, '', 'rieka_11', '05092010040451f_dolly@reg-buntung.com', '89bf4d8c4cd514c57340166adaf5bb83', 1, '0000-00-00 00:00:00'),
+(211, 'joko_15', 'b9334bbe3ea1c8852a22af599f6e6df7', 'jokohandoko15@yahoo.co.id', 1, 'joko handoko', '08990889043', '', '', 36, '', 'rieka_11', '05092010040724joko_15@reg-buntung.com', '79eff8f06bdef628a835f0dccda645a7', 1, '0000-00-00 00:00:00'),
+(212, 'rezna', 'b9334bbe3ea1c8852a22af599f6e6df7', 'resnafauziah@yahoo.co.id', 2, 'rezna fauziah', '08173212430', '', '', 36, '', 'rieka_11', '05092010042018rezna@reg-buntung.com', '9f67dd208d433ebaf236dffc4a4f074e', 1, '0000-00-00 00:00:00'),
+(213, 'bernaz', 'b9334bbe3ea1c8852a22af599f6e6df7', 'rolandbernaz@yahoo.co.id', 1, 'roland bernaz', '085692107789', '', '', 36, '', 'rieka_11', '05092010042306bernaz@reg-buntung.com', 'd8e0980a31634f1ada4eb05f124481e6', 1, '0000-00-00 00:00:00'),
+(214, 'jamali', 'b9334bbe3ea1c8852a22af599f6e6df7', 'tamajamali@yahoo.co.id', 1, 'tama jamali', '085698210123', '', '', 36, '', 'rieka_11', '05092010044110jamali@reg-buntung.com', '45734adc3f83c8e3933a43fc71fa8898', 1, '0000-00-00 00:00:00'),
+(215, 'bambang_29', 'b9334bbe3ea1c8852a22af599f6e6df7', 'bambangprayoga29@yahoo.co.id', 1, 'bambang prayoga', '081245768901', '', '', 36, '', 'rieka_11', '05092010044720bambang_29@reg-buntung.com', 'f9ff5fc12893fb13276c083f32d4401b', 1, '0000-00-00 00:00:00'),
+(216, 'r_talia', 'b9334bbe3ea1c8852a22af599f6e6df7', 'renatatalia@yahoo.co.id', 2, 'renata talia', '081290899001', '021', '7901287', 36, '', 'rieka_11', '05092010051105r_talia@reg-buntung.com', 'd86079faf4c86a73777ce04b2670d89b', 1, '0000-00-00 00:00:00'),
+(217, 'adisty', 'b9334bbe3ea1c8852a22af599f6e6df7', 'amiraadisty@yahoo.co.id', 2, 'amira adisty', '08569087680', '', '', 36, '', 'rieka_11', '05092010051624adisty@reg-buntung.com', 'ff1a1bc12652d9922701bd037d3050f3', 1, '0000-00-00 00:00:00'),
+(218, 'zaskianada', 'b9334bbe3ea1c8852a22af599f6e6df7', 'zaskianada@yahoo.co.id', 2, 'zaskia nada', '085764321090', '021', '7876509', 36, '', 'rieka_11', '05092010054855zaskianada@reg-buntung.com', '480c3b55d52a2d32ef9cfcb5eee1dc57', 1, '0000-00-00 00:00:00'),
+(219, 'gema_s', 'b9334bbe3ea1c8852a22af599f6e6df7', 'gema.safitriani@yahoo.co.id', 2, 'gema safitriani', '08186538688', '021', '7892156', 36, '', 'rieka_11', '05092010055556gema_s@reg-buntung.com', '42e7ad84f6fa9c03d832f3ac86c98153', 0, '0000-00-00 00:00:00'),
+(220, 'momogi', '34b54050d8a96e3d98526bc1b70cefca', 'momogi_gogo@yahoo.com', 1, 'Freddy', '0813258789', '', '', 0, '', 'carinoz', '04312012304522momogi@reg-buntung.com', '13b2074d7637bb0a6a9e5b8455cbeae6', 1, '0000-00-00 00:00:00'),
+(221, 'lolipop', 'd7b13ed95a6a4be5621a83e8e7cf0ab3', 'bunaken_keren@yahoo.co.id', 1, 'Melawati', '08179635478', '', '', 0, '', 'carinoz', '06312012304525lolipop@reg-buntung.com', '444aa02b7fac0316f6256e35847b8cab', 0, '0000-00-00 00:00:00'),
+(222, 'yudi_aja', '1c020d75b56c6b34172a794a439df6d2', 'yudi_fr_kerzo@yahoo.co.id', 1, 'Yudi', '0818112547', '', '', 0, '', 'carinoz', '07311112304515yudi_aja@reg-buntung.com', 'aaa1800ff3b5ccb435b05cc2baf68cde', 0, '0000-00-00 00:00:00'),
+(223, 'genemo', '0c01a6c20550486ad85184128f74b134', 'eric_290484@hotmail.com', 1, 'Eric', '081240145141', '', '', 35, 'Street 14 No. 313\r\nTembagapura Timika', 'aszy', '05092010111941genemo@reg-buntung.com', '0a0146128b781d113b1f072c282465b4', 1, '0000-00-00 00:00:00'),
+(224, 'wongs', 'f0cb590f72d17ab35c0ab5e73ff0b48a', 'wongscilik@yahoo.com', 1, 'Muchamad Rochim', '01299911757', '', '', 36, '', 'aszy', '05102010124157wongs@reg-buntung.com', '6a5646bb13fab948be76e51ad71f0852', 0, '0000-00-00 00:00:00'),
+(225, 'marvarium', 'f9054bfd755ec77c9a132b656aca72b6', 'overwhelming_sin@yahoo.com', 1, 'martanto setyo husodo', '085640668960', '', '', 25, 'jl. dewi sartika raya no. 19b rt03/rw04 perum IKIP Kel. Sukorejo, Kec. Gunung Pati, Kota Semarang', 'antonovic', '05102010012029marvarium@reg-buntung.com', '4f3813c6de30c2e64bd445de9e795223', 1, '0000-00-00 00:00:00'),
+(226, 'priandaru', '545585fcdd18d418bd81c30f930587b2', 'ndaruu_ballerz@yahoo.co.id', 1, 'priandaru agung nugroho', '085710489269', '', '', 8, '', 'buntung.com', '05102010041252priandaru@reg-buntung.com', 'de063bf488b47f0d9bdb468e0d4c2fff', 0, '0000-00-00 00:00:00'),
+(227, 'modhertz', '4c12d66f1bbd05de85b3c8991416b147', 'herrykoesyamin89@yahoo.co.id', 1, 'Herry', '021-98635763', '', '', 36, '', 'aszy', '05102010062657modhertz@reg-buntung.com', '05cc2d67ccfd2b99b4a7ab86839d84a5', 0, '0000-00-00 00:00:00'),
+(228, 'butet_@22', 'f01e0d7992a3b7748538d02291b0beae', 'ff_22@yahoo.com', 1, 'ferry fabian', '+628568331432', '0752', '9918432', 15, 'ahmad yani 60', 'aszy', '05102010065138butet_@22@reg-buntung.com', '0be00d5a2520e94e0c24ce0010278b94', 0, '0000-00-00 00:00:00'),
+(229, 'delia_76', 'b9334bbe3ea1c8852a22af599f6e6df7', 'deliafarah76@yahoo.co.id', 2, 'delia farah', '08179874630', '021', '98762029', 36, '', 'rieka_11', '05102010070413delia_76@reg-buntung.com', '2bdb7d75161026608dc4bee13d62268c', 1, '0000-00-00 00:00:00'),
+(230, 'pradipta', 'b9334bbe3ea1c8852a22af599f6e6df7', 'pradiptadrajat@yahoo.co.id', 1, 'pradipta drajat', '085790875675', '021', '7868769', 36, '', 'rieka_11', '05102010072801pradipta@reg-buntung.com', '082443a5ed16bd66b9b5194fa6c79d71', 1, '0000-00-00 00:00:00'),
+(231, 'dhika', '81a49362ef2886d7b0528fced75ab56e', 'dhikatigaroet@yahoo.co.id', 1, 'Sandika', '081221216077', '', '', 38, 'Jl. Sukajadi Blk 227. Bandung 40153', 'buntung.com', '05102010101606dhika@reg-buntung.com', '5dc0aa3c9729ad7814a0d90b5f5bad6d', 1, '0000-00-00 00:00:00'),
+(232, 'ferry901', '8013945f7acd4830a72851374df3895c', 'reborn_901@hotmail.com', 1, 'Agus ferry wibowo', '085642082656', '', '', 27, 'Jl.Abdul Muis 07 surakarta', 'raftin21', '05112010012211ferry901@reg-buntung.com', 'f11c5655c7a6bc3856bedec5a9f57a8d', 0, '0000-00-00 00:00:00'),
+(233, 'keyz7', '3673f007a316d70c05cf97c921d01d8e', 'tukang_somay@ymail.com', 1, 'fangky wijaya', '085624759546', '', '', 38, 'jalan cibatu mulya raya komplek pasir jati blok H no.11 ujungberung', 'buntung.com', '05112010024740keyz7@reg-buntung.com', 'eeced1d18aa8230938ddf305e821d3ba', 1, '0000-00-00 00:00:00'),
+(234, 'sibika', '4f328dd13fa88d25409c9bf0a7257590', 'rachmatheedayat@gmail.com', 1, 'rakhmat hidayat', '08122347016', '022', '4212060', 38, 'Gg. ardisasmita 131/16 B. Bandung 40261', 'aszy', '05112010043951sibika@reg-buntung.com', '1287f3860604b645213b6021ef8b9f3c', 1, '0000-00-00 00:00:00'),
+(235, 'xxxdragon', '82d21e53f74b7a30c620f25404837be9', 'riofso@gmail.com', 1, 'Rio F. So', '081410054703', '021', '60617071', 37, 'Pantai Modern\r\nBlok C1 no 49\r\nMarunda, Bekasi.', 'buntung.com', '05112010082407xxxdragon@reg-buntung.com', 'aa1c1d506fe77426a44874298ccde5e3', 1, '0000-00-00 00:00:00'),
+(236, 'rofi1988', '05bc731f9c4c3d1090685efb02314e49', 'rofi.ahmad@gmail.com', 1, 'Muhammad Arofi', '085642527311', '', '', 25, 'paesan utara, kec. kedungwuni, pekalongan', 'raftin21', '05112010022657rofi1988@reg-buntung.com', '21866bf7a61560d1d79f82d1da8d5929', 1, '0000-00-00 00:00:00'),
+(237, 'bono29', '3633957ce9e0d76d3943451e42551f67', 'bono29@gmail.com', 1, 'INDRA RIZKIAWAN', '081319422419', '', '', 36, 'Jatiwaringin', 'aszy', '05112010062847bono29@reg-buntung.com', '0984e15eaa779988b5147dfbb1023d55', 1, '0000-00-00 00:00:00'),
+(238, 'abitito', '385cde1f7728cf48205309eabbdf31fc', 'widyastomo@yahoo.com', 1, 'tito', '087881377864', '', '', 36, '', 'aszy', '05112010101919abitito@reg-buntung.com', '7d81f9d37ea03fd90c12446a81a1b5be', 1, '0000-00-00 00:00:00'),
+(239, 'hendrygote', 'ad814062e666c126e68a787df3442eed', 'hendrygotek@gmail.com', 1, 'Hendry', '087888503308', '', '', 36, '', 'buntung.com', '05112010113033hendrygote@reg-buntung.com', 'f5d0af384eff67a0d31208de0ccb0eeb', 1, '0000-00-00 00:00:00'),
+(240, 'untung', 'cc675f02e751e5634b947fef80132968', 'usaha@mail2world.com', 1, 'untung', '08080808080', '', '', 38, 'Padalarang', 'buntung.com', '05112010113834untung@reg-buntung.com', 'dddd81d2df5f34f210177073dabe3e9f', 1, '0000-00-00 00:00:00'),
+(241, 'saptayugo', '0d76cb8ecd397cd29768b7c30dc152f7', 'saptayugo@gmail.com', 1, 'yugo sapta ginanjar', '085863488060', '', '', 38, 'jl.pasirkumeli', 'buntung.com', '05122010122741saptayugo@reg-buntung.com', 'bf5667dea047c0e0c694cb4e389f01c5', 1, '0000-00-00 00:00:00'),
+(242, 'd1k4', 'f8aa78d873dd09f0f205e54223d7e1ab', 'andikaagus11@gmail.com', 1, 'andika agus pratama', '08999273969', '021', '87914743', 36, 'depok \r\ncilodong\r\nkp. bulak rt 04/02 no.75\r\nkalibaru, sukmajaya', 'aszy', '05122010061021d1k4@reg-buntung.com', '6bf11a6a7f5679e359c69d4a9f4f8ef1', 1, '0000-00-00 00:00:00'),
+(243, 'dennysam', 'f6b8679282fdf760aaad476fad0ddf12', 'dennysam@yahoo.com', 1, 'Denny Samosir', '0817169610', '021', '91701976', 36, 'Jl. Bungur Besar Raya No. 137\r\nSENEN', 'aszy', '05132010090100dennysam@reg-buntung.com', 'e218f194441816ac841be10e6b545405', 1, '0000-00-00 00:00:00'),
+(244, 'ayiiueo', '29dc6077227a854040f4e03d94201282', 'dyahastarisyabani@yahoo.com', 2, 'ayi', '021-91461976', '021', '91461976', 38, 'pocip 110 bekasi', 'raftin21', '05132010091834ayiiueo@reg-buntung.com', '80572850648bc6dbdd277b005f7d9c3d', 0, '0000-00-00 00:00:00'),
+(245, 'kadalawa', 'd177b4d1d9e6b6fa86521e4b3d00b029', 'dhemaxghe@gmail.com', 1, 'Dhema Pramantya Utomo', '08819162346', '0351', '369611', 7, 'Ds. Samberjo Kec. Geger Kab. Madiun', 'buntung.com', '05132010102508kadalawa@reg-buntung.com', 'ac40fc45d9527d1e49ac123c3f4b0023', 1, '0000-00-00 00:00:00'),
+(246, 'agie', '1ac0d72d238c86b2029c8419ba2574a2', 'id.gban@yahoo.com', 1, 'agie', '00000000000', '021', '8477348', 37, 'jatibening', 'aszy', '05132010104520agie@reg-buntung.com', 'df86afdd11e4b251434f2e07d92bf823', 1, '0000-00-00 00:00:00'),
+(247, 'kenzeiaja', 'b9d907e82bb388c22952e766bc7e20ba', 'krenz_aja_lah@yahoo.co.id', 1, 'Randi Satria Agung Nurcahya', '08811627972', '021', '91214505', 38, 'Perum SAtwika Permai \r\njatiLuhur JatiAsih Bekasi', 'buntung.com', '05132010110637kenzeiaja@reg-buntung.com', 'cd92b0641a6718e24604f67eeb9b16d8', 1, '0000-00-00 00:00:00'),
+(248, 'icebox', 'e00b29d5b34c3f78df09d45921c9ec47', 'icebox_65@yahoo.com', 1, 'zotico', '08569745446', '', '', 36, 'jln.bambu2', 'aszy', '05132010050938icebox@reg-buntung.com', 'd247086191635fc4a897282ecc639fb4', 0, '0000-00-00 00:00:00'),
+(249, 'paltiraja', 'edee3b5df94f82a90a0aee4bc5235af4', 'nugeloaing@gmail.com', 1, 'paltiraja', '0817207525', '021', '83819251', 36, 'jalan durikosambi no 25s cengkareng jakarta barat.', 'keil', '05132010052536paltiraja@reg-buntung.com', '25f6b9d75915954c4ac1cfb792fd72d2', 1, '0000-00-00 00:00:00'),
+(250, 'lycious', '2d70d6dfb931df1b5de61ada3452a177', 'lydia.londongallo@gmail.com', 2, 'lydia londong allo', '085649995066', '0341', '7561717', 10, 'jalan danau semayang 9 c2e5 sawojajar malang', 'keil', '05132010084422lycious@reg-buntung.com', 'beb0de79bccbbc5349f390cf49b655a5', 1, '0000-00-00 00:00:00'),
+(251, 'lionheart', 'a9f66a1e56009848af57c0d174d08ffe', 'ri_idoq@yahoo.com', 1, 'ridha alhamdi', '085275408710', '061', '8360012', 13, 'jl. bawang raya no 2', 'buntung.com', '05132010100348lionheart@reg-buntung.com', 'b915ed28abc947bb34365cbdae11370b', 1, '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ms_poin`
+--
+
+CREATE TABLE IF NOT EXISTS `ms_poin` (
+  `username` varchar(50) NOT NULL,
+  `jumlah_poin` varchar(30) NOT NULL,
+  `tanggal_update` datetime NOT NULL,
+  `admin` varchar(30) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ms_poin`
+--
+
+INSERT INTO `ms_poin` (`username`, `jumlah_poin`, `tanggal_update`, `admin`) VALUES
+('carinoz', '3908', '2010-05-23 16:08:31', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `packages`
+--
+
+CREATE TABLE IF NOT EXISTS `packages` (
+  `id_package` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nama_package` varchar(100) NOT NULL,
+  `jumlah_bid` int(10) NOT NULL,
+  `harga_package` varchar(50) NOT NULL,
+  `tgl_update` date NOT NULL,
+  `admin` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_package`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `packages`
+--
+
+INSERT INTO `packages` (`id_package`, `nama_package`, `jumlah_bid`, `harga_package`, `tgl_update`, `admin`) VALUES
+(1, '10 Credits', 10, '100000', '2010-05-16', 'admin'),
+(2, '20 Credits', 20, '180000', '2010-05-16', 'admin'),
+(3, '50 Credits', 50, '450000', '2010-05-16', 'admin'),
+(4, '100 Credits', 100, '850000', '2010-05-16', 'admin'),
+(5, '250 Credits', 250, '230000', '2010-05-16', 'admin'),
+(6, '500 Credits', 500, '450000', '2010-05-16', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pesan_packages`
+--
+
+CREATE TABLE IF NOT EXISTS `pesan_packages` (
+  `id_pesan_packages` int(10) NOT NULL AUTO_INCREMENT,
+  `id_package` int(10) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `tanggal_pesan` datetime NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0 Blm Confirm | 1 Sudah Confirm | 2 Admin ok | 3 tolak',
+  `tanggal_konfirmasi` datetime NOT NULL,
+  `token` varchar(100) NOT NULL,
+  `nama_bank` varchar(100) NOT NULL,
+  `nomor_rekening` varchar(30) NOT NULL,
+  `atas_nama` varchar(100) NOT NULL,
+  `tranfer_ke` varchar(50) NOT NULL,
+  `tanggal_approve` datetime NOT NULL,
+  `admin` varchar(50) NOT NULL,
+  `tanggal_tolak` datetime NOT NULL,
+  PRIMARY KEY (`id_pesan_packages`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `pesan_packages`
+--
+
+INSERT INTO `pesan_packages` (`id_pesan_packages`, `id_package`, `username`, `tanggal_pesan`, `status`, `tanggal_konfirmasi`, `token`, `nama_bank`, `nomor_rekening`, `atas_nama`, `tranfer_ke`, `tanggal_approve`, `admin`, `tanggal_tolak`) VALUES
+(2, 6, 'carinoz', '2010-05-16 12:52:23', 2, '2010-05-17 00:33:17', 'carinoz616201052051', 'aaaaaaaaaaa bbbbbbb', '11111111111111111', 'dfsgsgdsgf ', 'Bank Central Asia', '2010-05-18 12:38:16', 'admin', '2010-05-17 01:14:37'),
+(3, 5, 'carinoz', '2010-05-16 12:52:41', 0, '0000-00-00 00:00:00', 'carinoz516201052052', '', '', '', '0', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(4, 3, 'carinoz', '2010-05-18 12:43:04', 3, '2010-05-18 12:45:03', 'carinoz318201043053', 'aaaaaaaaa', '11111111111111111', 'bbbbbbbbbbb', 'Bank Central Asia', '2010-05-18 12:45:54', 'admin', '2010-05-18 12:47:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE IF NOT EXISTS `product` (
+  `id_product` int(10) NOT NULL AUTO_INCREMENT,
+  `id_kategori` int(10) NOT NULL,
+  `nama_barang` varchar(100) NOT NULL,
+  `gambar_barang` varchar(100) NOT NULL,
+  `gambar_barang2` varchar(200) NOT NULL,
+  `gambar_barang3` varchar(200) NOT NULL,
+  `keterangan` text NOT NULL,
+  `jumlah_poin` tinyint(3) NOT NULL,
+  `idmatauang` smallint(2) NOT NULL,
+  `harga` varchar(20) NOT NULL,
+  `harga_baru` varchar(20) NOT NULL DEFAULT '0',
+  `tanggal` date NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '4 Instant Buy, 5 Booking',
+  `tanggal_masuk` datetime NOT NULL,
+  `jumlah_minimal_koin` smallint(2) NOT NULL,
+  `tambah_harga` int(10) NOT NULL,
+  `tanggal_update` datetime NOT NULL,
+  PRIMARY KEY (`id_product`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id_product`, `id_kategori`, `nama_barang`, `gambar_barang`, `gambar_barang2`, `gambar_barang3`, `keterangan`, `jumlah_poin`, `idmatauang`, `harga`, `harga_baru`, `tanggal`, `status`, `tanggal_masuk`, `jumlah_minimal_koin`, `tambah_harga`, `tanggal_update`) VALUES
+(1, 1, '$25 Boston Market Gift Card', '201005220922551.jpg', '', '', '<b>$25 Boston Market Gift Card<b><br><br>Well provide you with the most essential thing: food. Boston Market is famous for its delicious, wholesome and convenient take out food.  Feast to your hearts content with the 25$ gift card. <br><br>Included<br>Boston Market $25 Gift Card<br>Details<br>redeemable in the USA', 1, 1, '250000', '260000', '2010-05-22', 0, '2010-05-22 10:22:55', 20, 10000, '2010-05-23 12:58:08'),
+(2, 1, 'Lands&#039; End Gift Card $100', '201005220924472.jpg', '', '', '<b>Lands End Gift Card $100<b><br><br>This Lands End gift card is the perfect gift idea as Lands End features almost everything you might possibly desire: clothing, footwear, bedding, furniture, jewelry, beauty products, books, housewares, tools, automotive products, and electronics.<br>This gift card might be redeemed by phone, online at www.landsend.com, or in Lands End, Sears or Kmart retail stores.<br><br><b>Includes</b><br>$100 Lands End gift card (not redeemable against cash payment)', 2, 1, '250000', '260000', '2010-05-22', 0, '2010-05-22 10:24:47', 20, 10000, '2010-05-23 12:56:39'),
+(3, 2, 'Apple Mac mini MC238LL/A Desktop, white', '201005220926501.jpg', '', '', '<b>Apple Mac mini MC238LL/A Desktop, white</b><br><br>With a faster 2.26 GHz Intel Core 2 Duo processor, Apples innovative Mac mini MC238LL/A desktop is perfect for home computing and digital media tasks. Being only 2-inch-tall, 6.5-inch square, it fits everywhere. Just add a keyboard, mouse, and monitor to get started. The Mac mini includes excellent video processing power from the integrated NVIDIA GeForce 9400M graphics chip, an ultra-fast FireWire 800 port, and dual video outputs; spacious 2GB of 1066MHz DDR3 SDRAM, and a 160GB serial ATA hard drive.<br>Includes<br>Apple Mac mini MC238LL/A, white<br>Mini-DVI to DVI adaptor, power adaptor and power cord<br>instructions: English, Spanish<br><br><b>Details</b><br>anodized aluminum enclosure<br>processor: 2.26GHz Intel Core 2 Duo processor, 3MB on-chip shared L2 cache running 1:1 with processor speed, 1066MHz frontside bus<br>memory: 2GB of 1066MHz DDR3 SDRAM; two SO-DIMM slots support up to 4GB<br>hard drive: 160GB serial ATA (5400 RPM)<br>slot-loading SuperDrive with double-layer support (DVD±R DL/DVD±RW/CD-RW)<br>graphics: NVIDIA GeForce 9400M graphics processor<br>communications: built-in AirPort Extreme 802.11n Wi-Fi wireless 802.11n networking, IEEE 802.11a/b/g compatible Bluetooth; Bluetooth 2.1 + EDR; 10/100/1000BASE-T Gigabit Ethernet<br>one FireWire 800 port, 5x USB 2.0 ports, Mini-DVI port, DVI output, VGA output, Mini DisplayPort output, combined optical digital audio input/audio line in (minijack), combined optical digital audio output/headphone out<br>built-in mono speaker<br>operating system: Mac OS X v10.6 Snow Leopard<br>meets ENERGY STAR 5.0 requirements<br>color: white<br>dimensions (h x w x d): 2 inches (5.08 cm) x 6.5 inches (16.51 cm) x 6.5 inches (16.51 cm)<br>weight: 2.9 lbs (1.31 kg)', 2, 1, '5000000', '', '2010-05-22', 0, '2010-05-22 10:26:50', 50, 10000, '0000-00-00 00:00:00'),
+(4, 2, 'Bose Mobile On-Ear Headset', '201005220927492.jpg', '', '', '<b>Bose Mobile On-Ear Headset</b><br><br>These Bose on-ear headphones deliver clean, rich sound in a small, light, on-ear design. Just slip them on and enjoy high-performance exclusively by Bose. Try them with your favorite tracks and you just may discover subtleties you never heard before. You might even forget you have them on due to their comfortable design.<br><br><b>Includes</b><br>Bose Mobile On-Ear Headset<br>two detachable single-earcup audio cables (16 and 43 inches)<br>instructions: English, Spanish<br><br><b>Details</b><br>TriPort® acoustic headphone structure<br>comfortable on-ear headphone design<br>clean, rich sound<br>remarkable range<br>fold-flat earcups and collapsible headband<br>padded with memory foam<br>lightweight fit: headphones weigh less than five ounces', 1, 1, '300000', '310000', '2010-05-22', 0, '2010-05-22 10:27:49', 25, 10000, '2010-05-23 12:59:27'),
+(5, 4, 'Artisan Kitchenaid Stand Mixer in black', '201005220928591.jpg', '', '', '<b>Artisan Kitchenaid Stand Mixer in black</b><br> <br>The Kitchen Aid KSM150PSOB Artisan Series stand mixer understands that professional quality appliances are required in most home kitchens. There are chefs in restaurants and there are equally creative chefs at home. The difference? How many people are you cooking for? This ones for you! 10 speed control, 2-piece pouring shield prevents splash-out, 5 rubber feet protect countertop and provide stability. Includes wire whip and dough hook. Comes with 5-quart stainless steel bowls. Easy to clean.<br><br><b>Includes</b><br>Kitchen Aid KSM150PSOB black<br>user manual in English and Spanish<br><br><b>Details</b><br>325-watt mixer with 10 speeds; 5-quart stainless steel bowl<br>tilt-back head for easy access to mixture<br>2-piece pouring shield with large chute for adding ingredients<br>includes flat beater, dough hook, and wire whip<br>dimensions: 14 by 8-2/3 inches by 14 inches<br>1-year warranty', 2, 1, '400000', '410000', '2010-05-22', 0, '2010-05-22 10:28:59', 30, 10000, '2010-05-23 16:08:31'),
+(6, 4, 'Delonghi Magnifica Super Automatic ESAM3300', '201005220929522.jpg', '', '', '<b>Delonghi Magnifica Super Automatic ESAM3300</b><br><br> <br>Discover the great diversity of coffee at the touch of a button. The Delonghi Magnifica Super Automatic ESAM3300 leaves nothing to be desired - a great choice in every way.<br>This Delonghi automatic coffee maker proves itself - with convenience, careful brewing and fine design: the choice for both gourmets and those who appreciate well-crafted appliances.<br>The ESAM3300 can be operated with both coffee beans and powder.<br> <br><b>Includes</b><br>Delonghi Magnifica ESAM3300<br>instructions: English<br>Specifications<br>integrated grinder<br>automatic shut-off<br>cup warming plate<br>frother<br>stainless steel<br>removable water tank', 2, 1, '450000', '460000', '2010-05-22', 4, '2010-05-22 10:29:52', 35, 10000, '2010-05-23 12:56:31'),
+(19, 2, 'Macbook Pro', '201005220236283.jpg', '201005220336403b.jpg', '201005220336473c.jpg', '<b>Precision aluminum. The new gold standard.</b><br>Carved from a single block of aluminum, the MacBook Pro is a true engineering achievement. Its patented unibody enclosure is the product of precise machining. From the thumbscoop to the now-you-see-it-now-you-don’t sleep indicator, no detail is unaccounted for. The end result is a notebook that’s not only breakthrough, but thin, light, polished, and refined. The unibody also makes MacBook Pro more durable than ever. So you can throw it in your briefcase or messenger bag and pull it out at an airport, at school, at the office, or on location without a second thought.<br><br><b>The longest-lasting Mac notebook battery ever.</b><br>The new energy-efficient architecture in every MacBook Pro, along with automatic graphics switching in the 15- and 17-inch models, gives you dramatically longer battery life. On a single charge, the battery in the new 13-inch MacBook Pro lasts up to 10 hours (8 to 9 hours on the 15- and 17-inch MacBook Pro).', 2, 1, '13000000', '13010000', '2010-05-22', 5, '2010-05-22 15:36:28', 130, 10000, '2010-05-23 15:38:53'),
+(20, 5, 'Microsoft Xbox 360 Game Console', '201005220240091.jpg', '', '', '<b>Microsoft Xbox 360 Game Console, 250GB, black</b><br><br>Hit the pedal to the metal with the Microsoft Xbox 360 limited edition! The Xbox 360 comes with a 250GB external hard drive for a huge storage capacity as well two wireless controllers. You also get an Xbox Live head-set to play games with other Xbox fans using internet. This console offers excellent connectivity and application features due to 3 USB ports, 1 HDMI port, and one DVD drive.<br><br><b>Includes</b><br>Microsoft Xbox 360 limited edition<br>Call of Duty Modern Warfare 2 Standard Edition, adaptor, Ethernet network cable, Xbox Live head-set, 250GB external hard drive, 2x wireless controllers<br>instructions: English, Spanish<br><br><b>Details</b><br>exclusive Modern Warfare 2 design<br>processor: IBM 64-Bit PowerPC-CPU<br>main storage: 512MB<br>hard drive: 250GB<br>DVD drive<br>graphics chip set: ATI-GPU (500MHz)<br>Internet-ready<br>use up to 4 wireless controllers<br>customizable user-interface<br>downward compatible<br>connections: 3x USB, 1x HDMI', 2, 1, '3500000', '3510000', '2010-05-22', 3, '2010-05-22 15:40:09', 90, 10000, '2010-05-23 10:53:21'),
+(21, 5, 'Sony PlayStation 3 slim 120GB', '201005220241122.jpg', '', '', '<b>Sony PlayStation 3 slim 120GB, black</b><br>With the brand-new PlayStation 3 120GB system, which is 33% slimmer and 36% lighter than its predecessor, you get free PlayStation Network membership, built-in Wi-Fi and 120GB of hard disk drive storage for games, music, videos and photos. The Dualshock 3 wireless controller included with the amazingly quiet and energy efficient PlayStation 3 120GB system provides the most intuitive game play experience, with pressure sensors in each action button for ultimate fun! Besides, every PS3™ system comes with a built-in Blu-ray player to give you excellent picture quality and the best high-definition viewing experience available.<br>A North American Playstation 3 will work in Australia, but you will not be able to play your Playstation 2, or Playstation 1 games, or watch Australian Blu-Ray Movies. You will be able to play Australian Playstation 3 games, though.<br><br>This is a NTSC console imported from the USA.<br><br><b>Includes</b><br>Sony PlayStation 3 slim 120GB, black<br>Dualshock 3 wireless controller, AC power cord, AV cable, USB cable<br>instructions: English, Spanish<br><br><b>Details</b><br>CPU: Cell Broadband Engine (Cell/B.E.)<br>sound: LPCM 7.1ch, Dolby Digital, Dolby Digital Plus, Dolby TrueHD, DTs, DTS-HD, AAC<br>memory: 256MB XDR Main RAM, 256MB GDDR3 VRAM<br>HDD: 2.5" serial ATA, 120GB<br>networking: Ethernet X1 (10BASE-T,100BASE-TX, 1000BASE-T), IEEE 802.11 b/g, Bluetooth 2.0 (EDR)<br>AV output: resolution: 1080p, 1080i, 720p, 480p, 480i (for PAL 576p, 576i); 1x HDMI OUT + Bravia Synch, 1x AV MULTI OUT, 1x DIGITAL OUT (OPTICAL)<br>BD/DVD/CD drive (read only): maximum read speed: BD 2x (BD-ROM), DVD 8x (DVD-ROM), CD 24x (CD-ROM)<br>2x USB ports<br>Dualshock 3 wireless controller for most intuitive game play<br>color: black<br>dimensions (w x h x d): 13.385 x 13.385 x 6.299 inches<br>weight: approx. 7.05 lb.', 2, 1, '3500000', '3510000', '2010-05-22', 4, '2010-05-22 15:41:12', 90, 10000, '2010-05-23 12:14:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rekening`
+--
+
+CREATE TABLE IF NOT EXISTS `rekening` (
+  `id_rekening` int(2) unsigned NOT NULL AUTO_INCREMENT,
+  `nama_bank` varchar(200) NOT NULL,
+  `nomor_rekening` varchar(50) NOT NULL,
+  `atas_nama` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_rekening`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `rekening`
+--
+
+INSERT INTO `rekening` (`id_rekening`, `nama_bank`, `nomor_rekening`, `atas_nama`) VALUES
+(1, 'Bank Central Asia', '111111111111', 'Robert '),
+(2, 'Bank Mandiri', '222222222222', 'Robert');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `term`
+--
+
+CREATE TABLE IF NOT EXISTS `term` (
+  `id` tinyint(1) NOT NULL,
+  `ket` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `term`
+--
+
+INSERT INTO `term` (`id`, `ket`) VALUES
+(1, 'General Business Terms and Conditions for Using DUBLICOM Ltd. Online Services <br><br>The General Business Terms and Conditions (hereafter referred to as: GTCs) of the DUBLICOM Ltd. (hereafter referred to as DubLi) for the use of DubLi online services in North America, Australia, and New Zealand can be found in the following provisions. The user is obliged to gain an extensive overview of the functions and operation of the website. The DubLi Help comments can be an aid in this purpose. The ‘Help’ comments contents are an accompaniment to the following GTCs and are acknowledged by the user through their utilization of DubLi online services. <br><br><br>§ 1 Validity and Compliancy<br><br>(1) The GTCs and guidelines of DubLi for the use of services offered on the DubLi website can be found in the following provisions. DubLi is the provider of particular auctions with gaming elements found on this web site. They serve to regulate the contractual and operational relationship between DubLi and the users of the auctions found on this website (hereafter referred to as “participants”). They apply to every participant, whether they are natural persons or legal entities. The participant declares his/her consent with these General Conditions by checking the “I have read and accept the GTC” box when establishing their user account or through the utilization of DubLis online services. <br><br>(2) DubLi reserves the right to change these GTCs, at any time and without stated reasons. These GTCs, are valid as of 9th November 2009.<br><br><br>§ 2 Contract, Eligibility, Registration<br><br>(1) The contractual partner of the participant is DUBLICOM Ltd., 17 Gr. Xenopoulou Street, 3106 Limassol, Cyprus.<br><br>(2) Those eligible to participate are persons older than 18 years. Excluded are DubLi employees, their relatives and dependants. The contractual conclusion for the purchase of Credits (see par. 4 of these GTCs) or for wares within a checkout process (see par. 7 of these GTCs) occurs through a participant offer and acceptance through DubLi. The participant enters their offer by means of the online form through the click of the button “PAY NOW” (with Credits) or “CONFIRM ORDER” (with products). DubLi declares its acceptance in an e-mail communication to the participant.<br><br>(3) In order to make use of the site, a user must complete the statements contained in the registration form. Please read the relevant data protection regulations. Each user is only permitted to register once under their postal address (residence). Participants residing in Australia or New Zealand can only bid on items marked with the Australian/New Zealand national flag and listed in the category Australia & NZ. DubLi and participants are obliged to keep passwords confidential. DubLi will not make passwords available to third parties. DubLi will neither request participant passwords by e-mail nor by telephone. <br>The participant is responsible for the use of his/her user account and password, as long as there has not been a breach of due diligence. If the participant is not responsible for the misuse of his/her user account or password, he/she shall not be liable for damages. <br><br><br>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonial`
+--
+
+CREATE TABLE IF NOT EXISTS `testimonial` (
+  `id_testimonial` int(10) NOT NULL AUTO_INCREMENT,
+  `isi_testimonial` text NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `tanggal_testimonial` datetime NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_testimonial`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `testimonial`
+--
+
+INSERT INTO `testimonial` (`id_testimonial`, `isi_testimonial`, `username`, `tanggal_testimonial`, `status`) VALUES
+(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus eros, aliquam vel, adipiscing ut, adipiscing eu, purus. Mauris luctus massa in ipsum. Duis vestibulum.', 'carinoz', '2010-05-18 13:40:13', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `token_pesan_packages`
+--
+
+CREATE TABLE IF NOT EXISTS `token_pesan_packages` (
+  `isi` int(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `token_pesan_packages`
+--
+
+INSERT INTO `token_pesan_packages` (`isi`) VALUES
+(4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tujuan`
+--
+
+CREATE TABLE IF NOT EXISTS `tujuan` (
+  `id_tujuan` int(10) NOT NULL AUTO_INCREMENT,
+  `tujuan` varchar(50) NOT NULL,
+  `tarif` int(10) NOT NULL,
+  PRIMARY KEY (`id_tujuan`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+
+--
+-- Dumping data for table `tujuan`
+--
+
+INSERT INTO `tujuan` (`id_tujuan`, `tujuan`, `tarif`) VALUES
+(1, 'JAYAPURA', 60000),
+(2, 'JEMBER', 19000),
+(3, 'KARAWANG', 7000),
+(4, 'KEDIRI', 17000),
+(5, 'KENDARI', 33000),
+(6, 'KUPANG', 38000),
+(7, 'MADIUN', 14000),
+(8, 'MAGELANG', 14000),
+(9, 'MAKASAR', 25000),
+(10, 'MALANG', 17000),
+(11, 'MANADO', 35000),
+(12, 'MATARAM', 19000),
+(13, 'MEDAN', 21000),
+(14, 'MOJOKERTO', 17000),
+(15, 'PADANG', 18000),
+(16, 'PALANGKARAYA', 23000),
+(17, 'PALEMBANG', 16000),
+(18, 'PALU', 30000),
+(19, 'PANDAAN', 16000),
+(20, 'PANGKAL PINANG', 16000),
+(21, 'PEKANBARU', 19000),
+(22, 'PONTIANAK', 20000),
+(23, 'PROBOLINGGO', 18000),
+(24, 'SAMARINDA', 31500),
+(25, 'SEMARANG', 12000),
+(26, 'SERANG', 7500),
+(27, 'SOLO', 12000),
+(28, 'SORONG', 60000),
+(29, 'SURABAYA', 13000),
+(30, 'TANGERANG', 5500),
+(31, 'TANJUNG PANDAN', 16000),
+(32, 'TANJUNG PINANG', 26000),
+(33, 'TARAKAN', 36000),
+(34, 'TERNATE', 40000),
+(35, 'TIMIKA', 70000),
+(36, 'JAKARTA', 5000),
+(37, 'BEKASI', 6000),
+(38, 'BANDUNG', 8000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `welcome`
+--
+
+CREATE TABLE IF NOT EXISTS `welcome` (
+  `id` tinyint(1) NOT NULL,
+  `ket` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `welcome`
+--
+
+INSERT INTO `welcome` (`id`, `ket`) VALUES
+(1, 'The GTCs and guidelines of DubLi for the use of services offered on the DubLi website can be found in the following provisions. DubLi is the provider of particular auctions with gaming elements found on this web site. They serve to regulate the contractual and operational relationship between DubLi and the users of the auctions found on this website (hereafter referred to as “participants”). They apply to every participant, whether they are natural persons or legal entities. The participant declares his/her consent with these General Conditions by checking the “I have read and accept the GTC” box when establishing their user account or through the utilization of DubLis online services. <br><br>Those eligible to participate are persons older than 18 years. Excluded are DubLi employees, their relatives and dependants. The contractual conclusion for the purchase of Credits (see par. 4 of these GTCs) or for wares within a checkout process (see par. 7 of these GTCs) occurs through a participant offer and acceptance through DubLi. The participant enters their offer by means of the online form through the click of the button “PAY NOW” (with Credits) or “CONFIRM ORDER” (with products). DubLi declares its acceptance in an e-mail communication to the participant.<br><br>In order to make use of the site, a user must complete the statements contained in the registration form. Please read the relevant data protection regulations. Each user is only permitted to register once under their postal address (residence). Participants residing in Australia or New Zealand can only bid on items marked with the Australian/New Zealand national flag and listed in the category Australia & NZ. DubLi and participants are obliged to keep passwords confidential. DubLi will not make passwords available to third parties. DubLi will neither request participant passwords by e-mail nor by telephone. <br>The participant is responsible for the use of his/her user account and password, as long as there has not been a breach of due diligence. If the participant is not responsible for the misuse of his/her user account or password, he/she shall not be liable for damages. <br><br>');
