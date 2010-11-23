@@ -1,7 +1,7 @@
 <?php
 include "common/top2.php";
 
-// perubahan //
+// perubahanku //
 
 //Mengambil nilai username dan tanggal daftar
 $username=urldecode($_GET[username]);
